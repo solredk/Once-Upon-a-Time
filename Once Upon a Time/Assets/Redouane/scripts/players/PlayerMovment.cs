@@ -9,105 +9,101 @@ public class PlayerMovment : MonoBehaviour
     float counter;
 
     [SerializeField] float movementSpeed = 5f;
-    [SerializeField] float sprintSpeed = 10;
-    [SerializeField] float jumpStrength;
+    [SerializeField] float sprintSpeed = 10f;
+    [SerializeField] float jumpStrength = 5f;
     [SerializeField] float stamina = 100;
-    [SerializeField] float gravity;
+    [SerializeField] float gravity = -9.81f; // Standard gravity
+    [SerializeField] float groundDistance = 0.7f;
 
     [SerializeField] bool isGrounded;
     [SerializeField] bool isSprinting;
     [SerializeField] bool tired;
 
     [SerializeField] Transform groundedCheck;
+    [SerializeField] LayerMask groundMask;
+    [SerializeField] CharacterController characterController;
 
-
-    Rigidbody rb;
-    Vector3 moveDirection;
-    Vector3 jump;
+    Vector2 input;
+    Vector3 velocity;
+    Vector3 horizontalMovement;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        jump = new Vector3(0, 2, 0);
+        //if (!characterController) characterController = GetComponent<CharacterController>();
     }
+
     private void Update()
     {
-        rb.velocity = moveDirection * movementSpeed;
-        if (Physics.Raycast(groundedCheck.position, groundedCheck.TransformDirection(Vector3.down), .8f))
+        isGrounded = Physics.CheckSphere(groundedCheck.position, groundDistance, groundMask);
+
+        if (isGrounded && velocity.y < 0)
         {
-            isGrounded = true;
+            velocity.y = 0f;  
         }
         else
         {
-            isGrounded = false;
+            velocity.y += gravity * Time.deltaTime; 
         }
-        if (!isGrounded)
-        {
-            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y - gravity * Time.deltaTime, rb.velocity.z);
-        }
-        if (isSprinting && stamina>=1) 
+
+        Move();
+        Stamina();
+    }
+
+    private void Stamina()
+    {
+        if (isSprinting && stamina > 0)
         {
             counter += Time.deltaTime;
-
-            if (counter > .1f)
+            if (counter > 0.1f)
             {
                 stamina--;
+                tired = stamina <= 0;
                 counter = 0;
             }
         }
-        else if (!isSprinting&& stamina<=99)
+        else if (!isSprinting && stamina < 100)
         {
             counter += Time.deltaTime;
-
-            if (counter > .1f)
+            if (counter > 0.1f)
             {
                 stamina++;
+                tired = stamina >= 100;
                 counter = 0;
             }
         }
-        if (stamina==0)
-        {
-            tired = true;
-        }
-        if (tired)
-        {
-            if (stamina == 100)
-            {
-                tired = false;
-            }
-        }
-
     }
 
     public void DoMoving(InputAction.CallbackContext context)
     {
-        Vector2 input = context.ReadValue<Vector2>();
-        moveDirection = new Vector3(input.x, 0, input.y);
+        input = context.ReadValue<Vector2>();
+        horizontalMovement = new Vector3(input.x, 0, input.y).normalized * movementSpeed;
     }
 
     public void DoJumping(InputAction.CallbackContext context)
     {
-        if (context.performed&&isGrounded)
+        if (context.performed && isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpStrength );
-            isGrounded = false;
+            velocity.y = Mathf.Sqrt(jumpStrength * -2f * gravity);  
         }
-        
     }
 
     public void DoRunning(InputAction.CallbackContext context)
     {
-        if (context.performed&& !isSprinting&&!tired) 
+        if (context.performed && !isSprinting && !tired)
         {
             isSprinting = true;
-            movementSpeed = 10;
+            movementSpeed = sprintSpeed;
         }
-        if (context.canceled && isSprinting||stamina==0)
+        else if (context.canceled || stamina == 0)
         {
             isSprinting = false;
-            movementSpeed = 5;
+            movementSpeed = 5f;
         }
     }
+
+    private void Move()
+    {
+        Vector3 finalMovement = horizontalMovement + new Vector3(0, velocity.y, 0);
+        characterController.Move(finalMovement * Time.deltaTime);
+    }
 }
-
-
