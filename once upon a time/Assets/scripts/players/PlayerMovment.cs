@@ -89,7 +89,7 @@ public class PlayerMovment : MonoBehaviour
     {
         if (context.performed&&isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpStrength, ForceMode.Force);
+            rb.AddForce(Vector3.up * jumpStrength );
             isGrounded = false;
         }
         
