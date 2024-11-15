@@ -6,6 +6,7 @@ public class Hinkel : MonoBehaviour
 {
     [SerializeField] private Transform playerLocation;
     [SerializeField] private List<Transform> nextLocations;
+    public float speed;
 
     void Start()
     {
@@ -14,17 +15,12 @@ public class Hinkel : MonoBehaviour
 
     void Update()
     {
-        playerLocation.position = transform.position;
 
         if(Input.GetKeyDown(KeyCode.J))
         {
             Debug.Log("Pressed");
-            switch(nextLocations.Count)
-            {
-                case 0:
-                   //playerLocation = nextLocation[i]
-                    break;
-            }
+            playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
+            nextLocations.Remove(nextLocations[0]);
         }
     }
 }

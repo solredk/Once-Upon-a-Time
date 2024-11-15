@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLocation: {fileID: 1989299718}
-  nextLocations:
+  nextlocations:
   - {fileID: 282549727}
   - {fileID: 134745715}
   - {fileID: 1321502400}
@@ -1272,6 +1272,7 @@ MonoBehaviour:
   - {fileID: 311597942}
   - {fileID: 137866456}
   - {fileID: 1480571147}
+  speed: 5
 --- !u!1001 &3481434708212654724
 PrefabInstance:
   m_ObjectHideFlags: 0
