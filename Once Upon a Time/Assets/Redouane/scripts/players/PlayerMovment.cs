@@ -11,25 +11,29 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float sprintSpeed = 10f;
     [SerializeField] float jumpStrength = 5f;
-    [SerializeField] float stamina = 100;
-    [SerializeField] float gravity = -9.81f; // Standard gravity
     [SerializeField] float groundDistance = 0.7f;
+    [SerializeField] float stamina = 100;
+    [SerializeField] float gravity = -9.81f;
+    [SerializeField] float climbSpeed;
 
-    [SerializeField] bool isGrounded;
     [SerializeField] bool isSprinting;
+    [SerializeField] bool isGrounded;
     [SerializeField] bool tired;
+    [SerializeField] bool isClimbing;
 
+    [SerializeField] CharacterController characterController;
     [SerializeField] Transform groundedCheck;
     [SerializeField] LayerMask groundMask;
-    [SerializeField] CharacterController characterController;
+    [SerializeField]ClimbState climbState;
 
     Vector2 input;
     Vector3 velocity;
     Vector3 horizontalMovement;
 
-    void Start()
+    private enum ClimbState
     {
-        //if (!characterController) characterController = GetComponent<CharacterController>();
+        jumping,
+        climbing
     }
 
     private void Update()
@@ -44,7 +48,11 @@ public class PlayerMovment : MonoBehaviour
         {
             velocity.y += gravity * Time.deltaTime; 
         }
-
+        
+        if (isClimbing && climbState == ClimbState.climbing)
+        {
+            Climbing();
+        }
         Move();
         Stamina();
     }
@@ -81,12 +89,27 @@ public class PlayerMovment : MonoBehaviour
 
     public void DoJumping(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
+        if (context.performed && isGrounded&& climbState == ClimbState.jumping)
         {
             velocity.y = Mathf.Sqrt(jumpStrength * -2f * gravity);  
         }
-    }
+        else if (context.performed && isGrounded && climbState == ClimbState.climbing)
+        {
+            isClimbing = true;
 
+        }
+        if (context.canceled && climbState == ClimbState.climbing)
+        {
+            isClimbing = false;
+        }
+    }
+    private void Climbing()
+    {
+        if (isClimbing && climbState == ClimbState.climbing)
+        {
+             velocity.y = climbSpeed;           
+        }
+    }
     public void DoRunning(InputAction.CallbackContext context)
     {
         if (context.performed && !isSprinting && !tired)
@@ -105,5 +128,20 @@ public class PlayerMovment : MonoBehaviour
     {
         Vector3 finalMovement = horizontalMovement + new Vector3(0, velocity.y, 0);
         characterController.Move(finalMovement * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("climbable"))
+        {
+            climbState = ClimbState.climbing;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("climbable"))
+        {
+            climbState = ClimbState.jumping;
+        }
     }
 }
