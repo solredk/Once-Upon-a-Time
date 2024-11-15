@@ -22,5 +22,10 @@ public class Hinkel : MonoBehaviour
             playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
             nextLocations.Remove(nextLocations[0]);
         }
+
+        if (playerLocation = nextLocations[20])
+        {
+            Debug.Log("Win");
+        }
     }
 }
