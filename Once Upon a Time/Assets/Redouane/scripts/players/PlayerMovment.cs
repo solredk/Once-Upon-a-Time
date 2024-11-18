@@ -6,29 +6,35 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovment : MonoBehaviour
 {
-    float counter;
-
-    [SerializeField] float movementSpeed = 5f;
-    [SerializeField] float sprintSpeed = 10f;
-    [SerializeField] float jumpStrength = 5f;
-    [SerializeField] float groundDistance = 0.7f;
-    [SerializeField] float stamina = 100;
-    [SerializeField] float gravity = -9.81f;
-    [SerializeField] float climbSpeed;
-
-    [SerializeField] bool isSprinting;
-    [SerializeField] bool isGrounded;
-    [SerializeField] bool tired;
-    [SerializeField] bool isClimbing;
-
     [SerializeField] CharacterController characterController;
+
     [SerializeField] Transform groundedCheck;
+
     [SerializeField] LayerMask groundMask;
-    [SerializeField]ClimbState climbState;
+    [SerializeField] ClimbState climbState;
 
     Vector2 input;
     Vector3 velocity;
     Vector3 horizontalMovement;
+
+    [SerializeField] float movementSpeed = 5f;
+    [SerializeField] float groundDistance = 0.7f;    
+    [SerializeField] float gravity = -9.81f;
+    [SerializeField] bool isGrounded;
+    
+    [SerializeField] float sprintSpeed = 10f;
+    [SerializeField] float stamina = 100;
+    [SerializeField] bool isSprinting;
+    [SerializeField] bool tired;
+    
+    [SerializeField] float jumpStrength = 5f;
+    [SerializeField] float climbSpeed;
+    [SerializeField] bool isClimbing;
+ 
+    float counter;
+
+
+
 
     private enum ClimbState
     {
@@ -53,7 +59,9 @@ public class PlayerMovment : MonoBehaviour
         {
             Climbing();
         }
+
         Move();
+        
         Stamina();
     }
 
@@ -98,11 +106,12 @@ public class PlayerMovment : MonoBehaviour
             isClimbing = true;
 
         }
-        if (context.canceled && climbState == ClimbState.climbing)
+        if (context.canceled )
         {
             isClimbing = false;
         }
     }
+
     private void Climbing()
     {
         if (isClimbing && climbState == ClimbState.climbing)
@@ -110,6 +119,7 @@ public class PlayerMovment : MonoBehaviour
              velocity.y = climbSpeed;           
         }
     }
+
     public void DoRunning(InputAction.CallbackContext context)
     {
         if (context.performed && !isSprinting && !tired)
@@ -137,6 +147,7 @@ public class PlayerMovment : MonoBehaviour
             climbState = ClimbState.climbing;
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("climbable"))
