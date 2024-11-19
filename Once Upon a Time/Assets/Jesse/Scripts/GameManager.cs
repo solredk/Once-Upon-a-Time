@@ -6,15 +6,5 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private TextMeshProUGUI jKey;
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
+    
 }
