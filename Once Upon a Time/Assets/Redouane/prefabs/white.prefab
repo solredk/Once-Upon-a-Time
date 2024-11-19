@@ -65,7 +65,7 @@ Transform:
   m_GameObject: {fileID: 6703103769229965737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.2, y: -7.811, z: -26.1}
+  m_LocalPosition: {x: -20.2, y: -6, z: -26.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -267,23 +267,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17af1a47a5c85e440be8b7ec2f0dc41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
-  sprintSpeed: 10
-  jumpStrength: 4
-  groundDistance: 0.7
-  stamina: 0
-  gravity: -10
-  climbSpeed: 7
-  isSprinting: 0
-  isGrounded: 0
-  tired: 0
-  isClimbing: 0
   characterController: {fileID: 6739600450232883939}
   groundedCheck: {fileID: 829880551501287501}
   groundMask:
     serializedVersion: 2
     m_Bits: 8
   climbState: 0
+  movementSpeed: 5
+  groundDistance: 0.7
+  gravity: -10
+  isGrounded: 0
+  sprintSpeed: 10
+  stamina: 0
+  isSprinting: 0
+  tired: 0
+  jumpStrength: 4
+  climbSpeed: 7
+  isClimbing: 0
 --- !u!143 &6739600450232883939
 CharacterController:
   m_ObjectHideFlags: 0
@@ -349,11 +349,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9745954e96bcb340b37a219c6676cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SurviveTime: 0
+  username: white
   state: 1
-  tagged: 0
-  Intikradius: 0
   closestPlayer: {fileID: 0}
+  inTagRadius: 0
+  SurviveTime: 0
 --- !u!65 &7204909951539490445
 BoxCollider:
   m_ObjectHideFlags: 0

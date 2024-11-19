@@ -17,29 +17,30 @@ public class PlayerMovment : MonoBehaviour
     Vector3 velocity;
     Vector3 horizontalMovement;
 
+    [Header("movement")]
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float groundDistance = 0.7f;    
     [SerializeField] float gravity = -9.81f;
     [SerializeField] bool isGrounded;
-    
+
+    [Header("sprinting")]
     [SerializeField] float sprintSpeed = 10f;
     [SerializeField] float stamina = 100;
     [SerializeField] bool isSprinting;
     [SerializeField] bool tired;
-    
+
+    [Header("jumping")]
     [SerializeField] float jumpStrength = 5f;
     [SerializeField] float climbSpeed;
     [SerializeField] bool isClimbing;
  
     float counter;
 
-
-
-
     private enum ClimbState
     {
         jumping,
         climbing
+
     }
 
     private void Update()
@@ -106,7 +107,7 @@ public class PlayerMovment : MonoBehaviour
             isClimbing = true;
 
         }
-        if (context.canceled )
+        if (context.canceled)
         {
             isClimbing = false;
         }
@@ -142,7 +143,7 @@ public class PlayerMovment : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("climbable"))
+        if (other.gameObject.CompareTag("climbable")&& other.gameObject.layer == LayerMask.NameToLayer("Climable"))
         {
             climbState = ClimbState.climbing;
         }
