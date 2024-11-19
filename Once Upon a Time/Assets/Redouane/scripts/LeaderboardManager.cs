@@ -35,10 +35,4 @@ public class LeaderboardManager : MonoBehaviour
             scoreboardText.text += entry.Key + ": " + entry.Value.ToString("N2") + "seconden"+ "\n";
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

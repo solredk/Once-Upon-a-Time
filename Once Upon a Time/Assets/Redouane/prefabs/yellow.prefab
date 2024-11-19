@@ -277,8 +277,9 @@ MonoBehaviour:
   groundDistance: 0.7
   gravity: -10
   isGrounded: 0
-  sprintSpeed: 10
-  stamina: 0
+  staminaSpeed: 0
+  sprintSpeed: 20
+  stamina: 100
   isSprinting: 0
   tired: 0
   jumpStrength: 4

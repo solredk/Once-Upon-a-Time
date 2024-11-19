@@ -22,7 +22,7 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float groundDistance = 0.7f;    
     [SerializeField] float gravity = -9.81f;
     [SerializeField] bool isGrounded;
-
+    [SerializeField] float staminaSpeed;
     [Header("sprinting")]
     [SerializeField] float sprintSpeed = 10f;
     [SerializeField] float stamina = 100;
@@ -45,7 +45,7 @@ public class PlayerMovment : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics.CheckSphere(groundedCheck.position, groundDistance, groundMask);
+        isGrounded = Physics.Raycast(groundedCheck.position, Vector3.down, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
         {
@@ -68,37 +68,39 @@ public class PlayerMovment : MonoBehaviour
 
     private void Stamina()
     {
-        if (isSprinting && stamina > 0)
+        if (!tired && stamina <= 0)
         {
-            counter += Time.deltaTime;
+            counter += Time.deltaTime * staminaSpeed;
             if (counter > 0.1f)
             {
                 stamina--;
-                tired = stamina <= 0;
+                tired = true ;
                 counter = 0;
             }
         }
         else if (!isSprinting && stamina < 100)
         {
-            counter += Time.deltaTime;
+            counter += Time.deltaTime * staminaSpeed;
             if (counter > 0.1f)
             {
                 stamina++;
-                tired = stamina >= 100;
                 counter = 0;
             }
         }
+
     }
 
     public void DoMoving(InputAction.CallbackContext context)
     {
         input = context.ReadValue<Vector2>();
-        horizontalMovement = new Vector3(input.x, 0, input.y).normalized * movementSpeed;
+                horizontalMovement = new Vector3(input.x, 0, input.y).normalized * movementSpeed;
+
+        
     }
 
     public void DoJumping(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded&& climbState == ClimbState.jumping)
+        if (context.performed && isGrounded&& climbState == ClimbState.jumping&&!tired)
         {
             velocity.y = Mathf.Sqrt(jumpStrength * -2f * gravity);  
         }
@@ -123,12 +125,13 @@ public class PlayerMovment : MonoBehaviour
 
     public void DoRunning(InputAction.CallbackContext context)
     {
-        if (context.performed && !isSprinting && !tired)
+        if (context.performed && stamina > 0 && !tired)
         {
             isSprinting = true;
             movementSpeed = sprintSpeed;
+            counter -= Time.deltaTime * staminaSpeed;
         }
-        else if (context.canceled || stamina == 0)
+        else if (context.canceled || stamina == 0||tired)
         {
             isSprinting = false;
             movementSpeed = 5f;

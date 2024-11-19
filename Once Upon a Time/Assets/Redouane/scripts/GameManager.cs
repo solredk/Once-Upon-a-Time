@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using TMPro;
 
 public abstract class GameManager : MonoBehaviour
 {
@@ -17,6 +17,7 @@ public abstract class GameManager : MonoBehaviour
     }
 
     [SerializeField] protected PlayerInputManager playerInputManager;
+    [SerializeField] protected List<TextMeshProUGUI> textMeshProUGUI;
     
     [SerializeField] protected List<GameObject> Players; [Tooltip("de default player prefaps (max 4)")]
     [SerializeField] protected List<GameObject> currentPlayers; [Tooltip("de prefaps in de scene (max 4)")]
@@ -27,7 +28,7 @@ public abstract class GameManager : MonoBehaviour
 
     [Header("de counters")]
     [SerializeField] protected float Gameduration;
-    [SerializeField] protected float counter; [Tooltip("de timer voor de start van de game en de game zelf")]
+    [SerializeField] protected float counter = 10f; [Tooltip("de timer voor de start van de game en de game zelf")]
 
     [Header("de player nummers")]
     [SerializeField] protected int randomTaggerIndex; [Tooltip("de random nummer die wordt gegenereerd aan de start van de game om de player voor de stellen")]
@@ -40,11 +41,12 @@ public abstract class GameManager : MonoBehaviour
         playerInputManager.playerPrefab = Players[0];
         if (playerInputManager != null)
             playerInputManager = GetComponent<PlayerInputManager>();
+        textMeshProUGUI[0].text = "no players in lobby";
     }
 
     private void FixedUpdate()
     {
-                switch (state)
+        switch (state)
         {
             case GameState.preparelevel:
                 PrepareLevel();
@@ -69,8 +71,10 @@ public abstract class GameManager : MonoBehaviour
 
     protected virtual void StartGame()
     {
-        counter += Time.deltaTime;
-        if (counter > Gameduration)
+        Gameduration -= Time.deltaTime;
+        textMeshProUGUI[0].text = Gameduration.ToString("N0");
+        textMeshProUGUI[1].text = "";
+        if (Gameduration <= 0)
         {
             state = GameState.CollectData;
         }
@@ -85,6 +89,7 @@ public abstract class GameManager : MonoBehaviour
     public virtual void DoJoin()
     {
         playerInputManager.playerPrefab = Players[playerInputManager.playerCount];
+        textMeshProUGUI[0].text = playerInputManager.playerCount + "/4 players";
 
     }
 }

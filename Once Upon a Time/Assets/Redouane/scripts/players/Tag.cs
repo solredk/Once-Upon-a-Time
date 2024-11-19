@@ -4,24 +4,25 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-    enum PlayerState 
+
+public class Tag : MonoBehaviour
+{
+    public enum PlayerState 
     {
         tikker,
         verstopper,
         invincible
     }
-
-public class Tag : MonoBehaviour
-{
     public string username;
 
     [SerializeField] PlayerState state;
-
+    public PlayerState State { get { return state; } set { state = value; } }
     [SerializeField] GameObject closestPlayer;
     
     [SerializeField] bool inTagRadius;
 
     [SerializeField]float SurviveTime;
+    [SerializeField] bool tagged;
     float counter;
 
     private void Update()
@@ -39,6 +40,10 @@ public class Tag : MonoBehaviour
                 state = PlayerState.verstopper;
             }
         }
+        if (tagged) 
+        {
+            Getaged();
+        }
     }
 
     private bool HasPlayerInTikkerState()
@@ -53,6 +58,7 @@ public class Tag : MonoBehaviour
         {
             state = PlayerState.tikker;
             Debug.Log(this.gameObject);
+            tagged = false;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -77,7 +83,7 @@ public class Tag : MonoBehaviour
             state = PlayerState.invincible;
             if (closestPlayer != null && closestPlayer != this.gameObject)
             {
-                closestPlayer.GetComponent<Tag>().Getaged();
+                closestPlayer.GetComponent<Tag>().tagged = true;
             }
         }
     }

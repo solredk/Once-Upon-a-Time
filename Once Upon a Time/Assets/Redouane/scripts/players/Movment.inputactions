@@ -210,30 +210,8 @@
                 },
                 {
                     "name": "",
-                    "id": "9d538ff4-1747-4fec-a1f0-8572bea9b4d4",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bf009677-8fde-40c6-aed9-4065745a86c9",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c1853045-5cb0-4acc-8442-f02dfb875dee",
-                    "path": "<Keyboard>/shift",
+                    "id": "b5222373-9c64-416f-be6b-5c3cf18c55d2",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -243,19 +221,8 @@
                 },
                 {
                     "name": "",
-                    "id": "911f66ff-2a23-4eb9-85c5-649f43ceeb24",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "sprinten",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9b2d2677-b57b-4cd8-ab61-5af7975113c0",
-                    "path": "<Gamepad>/leftStickPress",
+                    "id": "e49b8bb8-4972-4e1f-9866-62b2bd51f55d",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -282,6 +249,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "taggen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d538ff4-1747-4fec-a1f0-8572bea9b4d4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf009677-8fde-40c6-aed9-4065745a86c9",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
