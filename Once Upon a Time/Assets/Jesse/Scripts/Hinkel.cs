@@ -55,7 +55,6 @@ public class Hinkel : MonoBehaviour
 
     private IEnumerator showImage1()
     {
-        Debug.Log("in1");
         yield return new WaitForSeconds(randomTime);
         randomImage1 = GetRandomImages(keyImages, 1);
         randomImage1[0].enabled = true;
@@ -64,7 +63,6 @@ public class Hinkel : MonoBehaviour
 
     private IEnumerator showImage2()
     {
-        Debug.Log("in2");
         yield return new WaitForSeconds(randomTime);
         randomImage2 = GetRandomImages(keyImages, 2);
         randomImage2[0].enabled = true;
