@@ -23,7 +23,7 @@ public class Hinkel : MonoBehaviour
 
     void Start()
     {
-        randomTime1 = Random.Range(4f, 6f);
+        randomTime1 = Random.Range(2f, 4f);
         randomTime2 = Random.Range(0.5f, 3f);
 
         foreach(Image image in keyImages)
@@ -38,7 +38,12 @@ public class Hinkel : MonoBehaviour
             { KeyCode.E, keyImages[2] },
             { KeyCode.R, keyImages[3] },
             { KeyCode.T, keyImages[4] },
-            { KeyCode.Y, keyImages[5] }
+            { KeyCode.Y, keyImages[5] },
+            { KeyCode.U, keyImages[6] },
+            { KeyCode.I, keyImages[7] },
+            { KeyCode.O, keyImages[8] },
+            { KeyCode.P, keyImages[9] },
+
         };
 
         StartCoroutine(StartGame());
@@ -47,27 +52,45 @@ public class Hinkel : MonoBehaviour
     List<Image> GetRandomImages(List<Image> inputList, int count)
     {
         List<Image> outputList = new List<Image>();
+        List<Image> availableImages = new List<Image>(inputList);
+
         for (int i = 0; i < count; i++)
         {
+            if (availableImages.Count == 0) break;
+
+
             int index = Random.Range(0, inputList.Count);
             outputList.Add(inputList[index]);
+            //availableImages.RemoveAt(index);
         }
         return outputList;
     }
 
-    private IEnumerator showImage1()
+    private IEnumerator ShowImage1()
     {
         yield return new WaitForSeconds(randomTime1);
         randomImage1 = GetRandomImages(keyImages, 1);
         randomImage1[0].enabled = true;
+
+        while (randomImage1[0].enabled)
+        {
+            CheckKeyPress1();
+            yield return null;
+        }
     }
 
-    private IEnumerator showImage2()
+    private IEnumerator ShowImage2()
     {
         yield return new WaitForSeconds(randomTime2);
         randomImage2 = GetRandomImages(keyImages, 2);
         randomImage2[0].enabled = true;
         randomImage2[1].enabled = true;
+
+        while (randomImage2[0].enabled && randomImage2[1].enabled)
+        {    
+            CheckKeyPress2();
+            yield return null;
+        }
     }
 
     private IEnumerator StartGame()
@@ -122,13 +145,13 @@ public class Hinkel : MonoBehaviour
         if(other.gameObject.CompareTag("1 vakje"))
         {
             Debug.Log("in1");
-            StartCoroutine(showImage1());
+            StartCoroutine(ShowImage1());
         }
 
         if (other.gameObject.CompareTag("2 vakjes"))
         {
             Debug.Log("in2");
-            StartCoroutine(showImage2());
+            StartCoroutine(ShowImage2());
         }
 
         if (other.gameObject.CompareTag("Finish"))
@@ -141,12 +164,12 @@ public class Hinkel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("1 vakje"))
         {
-            CheckKeyPress1();
+            //CheckKeyPress1();
         }
 
         if (other.gameObject.CompareTag("2 vakjes"))
         {
-            CheckKeyPress2();
+            //CheckKeyPress2();
         }
 
         if (other.gameObject.CompareTag("Finish"))
