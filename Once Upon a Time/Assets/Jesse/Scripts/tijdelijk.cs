@@ -31,5 +31,7 @@ public class tijdelijk : MonoBehaviour
             var randomImage2 = GetRandomImages(list, 2);
             Debug.Log(randomImage2);
         }
+
+
     }
 }

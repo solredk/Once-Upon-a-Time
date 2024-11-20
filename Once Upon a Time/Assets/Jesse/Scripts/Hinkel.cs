@@ -9,77 +9,37 @@ using UnityEngine.UI;
 public class Hinkel : MonoBehaviour
 {
     [SerializeField] private Transform playerLocation;
+
     [SerializeField] private List<Transform> nextLocations;
-    public float speed;
-
     public List<Image> keyImages;
+    private List<Image> randomImage1;
+    private List<Image> randomImage2;
 
-    [SerializeField] private Image Qkey;
-    [SerializeField] private Image Wkey;
-    [SerializeField] private Image Ekey;
-    [SerializeField] private Image Rkey;
-    [SerializeField] private Image Tkey;
-    [SerializeField] private Image Ykey;
+    private Dictionary<KeyCode, Image> keyImageMapping;
 
     private float randomTime;
+    public float speed;
 
     void Start()
     {
         randomTime = Random.Range(2f, 8f);
 
-        Qkey.enabled = false;
-        Wkey.enabled = false;
-        Ekey.enabled = false;
-        Rkey.enabled = false;
-        Tkey.enabled = false;
-        Ykey.enabled = false;
+        foreach(Image image in keyImages)
+        {
+            image.enabled = false;
+        }
+
+        keyImageMapping = new Dictionary<KeyCode, Image>
+        {
+            { KeyCode.Q, keyImages[0] },
+            { KeyCode.W, keyImages[1] },
+            { KeyCode.E, keyImages[2] },
+            { KeyCode.R, keyImages[3] },
+            { KeyCode.T, keyImages[4] },
+            { KeyCode.Y, keyImages[5] }
+        };
 
         StartCoroutine(StartGame());
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q) && Qkey.enabled == true)
-        {
-            Qkey.enabled = false;
-            playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
-            nextLocations.Remove(nextLocations[0]);
-        }
-
-        if (Input.GetKeyDown(KeyCode.W) && Wkey.enabled == true)
-        {
-            Wkey.enabled = false;
-            playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
-            nextLocations.Remove(nextLocations[0]);
-        }
-
-        if (Input.GetKeyDown(KeyCode.E) && Ekey.enabled == true)
-        {
-            Ekey.enabled = false;
-            playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
-            nextLocations.Remove(nextLocations[0]);
-        }
-
-        if (Input.GetKeyDown(KeyCode.R) && Rkey.enabled == true)
-        {
-            Rkey.enabled = false;
-            playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
-            nextLocations.Remove(nextLocations[0]);
-        }
-
-        if (Input.GetKeyDown(KeyCode.T) && Tkey.enabled == true)
-        {
-            Tkey.enabled = false;
-            playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
-            nextLocations.Remove(nextLocations[0]);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Y) && Ykey.enabled == true)
-        {
-            Ykey.enabled = false;
-            playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
-            nextLocations.Remove(nextLocations[0]);
-        }
     }
 
     List<Image> GetRandomImages(List<Image> inputList, int count)
@@ -95,19 +55,20 @@ public class Hinkel : MonoBehaviour
 
     private IEnumerator showImage1()
     {
-        yield return new WaitForSeconds(randomTime);
         Debug.Log("in1");
-        List<Image> randomImage1 = GetRandomImages(keyImages, 1);
+        yield return new WaitForSeconds(randomTime);
+        randomImage1 = GetRandomImages(keyImages, 1);
         randomImage1[0].enabled = true;
         StopCoroutine(showImage1());
     }
 
     private IEnumerator showImage2()
     {
+        Debug.Log("in2");
         yield return new WaitForSeconds(randomTime);
-        List<Image> randomImage1 = GetRandomImages(keyImages, 2);
-        randomImage1[0].enabled = true;
-        randomImage1[1].enabled = true;
+        randomImage2 = GetRandomImages(keyImages, 2);
+        randomImage2[0].enabled = true;
+        randomImage2[1].enabled = true;
         StopCoroutine(showImage2());
     }
 
@@ -117,6 +78,45 @@ public class Hinkel : MonoBehaviour
         playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
         nextLocations.Remove(nextLocations[0]);
         StopCoroutine(StartGame());
+    }
+
+    private void CheckKeyPress1()
+    {
+        foreach(var keyImages in keyImageMapping)
+        {
+            if(Input.GetKeyDown(keyImages.Key) && keyImages.Value.enabled)
+            {
+                keyImages.Value.enabled = false;
+                MoveToNextLocation();
+                break;
+            }
+        }
+    }
+
+    private void CheckKeyPress2()
+    {
+        var keysPressed = keyImageMapping
+            .Where(kv => Input.GetKey(kv.Key) && kv.Value.enabled)
+            .ToList();
+
+        if (keysPressed.Count == 2)
+        {
+            foreach (var keyImage in keysPressed)
+            {
+                keyImage.Value.enabled = false;
+            }
+
+            MoveToNextLocation();
+        }
+    }
+
+    private void MoveToNextLocation()
+    {
+        if(nextLocations.Count > 1)
+        {
+            playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
+            nextLocations.Remove(nextLocations[0]);
+        }
     }
 
 
@@ -132,6 +132,24 @@ public class Hinkel : MonoBehaviour
         {
             Debug.Log("in2");
             StartCoroutine(showImage2());
+        }
+
+        if (other.gameObject.CompareTag("Finish"))
+        {
+            Debug.Log("Won!");
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("1 vakje"))
+        {
+            CheckKeyPress1();
+        }
+
+        if (other.gameObject.CompareTag("2 vakjes"))
+        {
+            CheckKeyPress2();
         }
 
         if (other.gameObject.CompareTag("Finish"))
