@@ -154,7 +154,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "2D Vector",
+                    "name": "joystick",
                     "id": "8ecd4ed8-c19c-4db8-a2ff-fa4881c894ff",
                     "path": "2DVector",
                     "interactions": "",
@@ -209,6 +209,61 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "arrows controller",
+                    "id": "7fa9b0c0-45df-4ecf-bf22-8756b3972f89",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "2ef50da3-80bc-49eb-9ba4-cd335c6e0325",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "24be7e19-db6d-4669-94b8-826ef8626904",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "af31e02f-1f01-4f88-9475-655eaad22756",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "95ba90b2-9e64-4f50-a297-954841cc811f",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "b5222373-9c64-416f-be6b-5c3cf18c55d2",
                     "path": "<Gamepad>/rightTrigger",
@@ -223,6 +278,17 @@
                     "name": "",
                     "id": "e49b8bb8-4972-4e1f-9866-62b2bd51f55d",
                     "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "sprinten",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f28ab9e-c3eb-4d7a-8f65-b1ce99493bb2",
+                    "path": "<Gamepad>/leftStickPress",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

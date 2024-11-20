@@ -8,31 +8,46 @@ public class LeaderboardManager : MonoBehaviour
 {
     [SerializeField] List<string> usernames;
     List<float> scores;
-
+    int lastgame;
+    Dictionary<string,float> keyValuePairs = new Dictionary<string,float>();
     [SerializeField] TextMeshProUGUI scoreboardText;
 
     void Start()
+    {
+        lastgame = PlayerPrefs.GetInt("game");
+        switch (lastgame)
+        {
+            case 1:
+                Tag();
+                break;
+
+        }
+    }
+
+
+    void Tag()
     {
         scores = new List<float>(new float[usernames.Count]);
         for (int i = 0; i < usernames.Count; i++)
         {
             scores[i] = PlayerPrefs.GetFloat(usernames[i]);
             scoreboardText.text += usernames[i] + ": " + scores[i] + "\n";
-            
+
         }
-        List<KeyValuePair<string, float>> leaderboard = new List<KeyValuePair<string, float>>();
+
+        
         for (int i = 0; i < usernames.Count; i++)
         {
-            leaderboard.Add(new KeyValuePair<string, float>(usernames[i], scores[i]));
+            keyValuePairs.Add(tag, scores[i]);
         }
 
-        leaderboard = leaderboard.OrderByDescending(entry => entry.Value).ToList();
+        keyValuePairs = keyValuePairs.OrderBy(tvalue => tvalue.Value).ToList().ToDictionary(x => x.Key, x => x.Value); ;
 
 
-        scoreboardText.text = ""; 
-        foreach (KeyValuePair<string, float> entry in leaderboard)
+        scoreboardText.text = "";
+        foreach (KeyValuePair<string, float> entry in keyValuePairs)
         {
-            scoreboardText.text += entry.Key + ": " + entry.Value.ToString("N2") + "seconden"+ "\n";
+            scoreboardText.text += entry.Key + ": " + entry.Value.ToString("N2") + "seconden" + "\n";
         }
     }
 }

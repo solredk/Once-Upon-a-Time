@@ -277,7 +277,7 @@ MonoBehaviour:
   groundDistance: 0.7
   gravity: -10
   isGrounded: 0
-  staminaSpeed: 0
+  staminaSpeed: 2
   sprintSpeed: 20
   stamina: 100
   isSprinting: 0
@@ -355,6 +355,7 @@ MonoBehaviour:
   closestPlayer: {fileID: 0}
   inTagRadius: 0
   SurviveTime: 0
+  tagged: 0
 --- !u!65 &7204909951539490445
 BoxCollider:
   m_ObjectHideFlags: 0

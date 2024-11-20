@@ -33,7 +33,8 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float jumpStrength = 5f;
     [SerializeField] float climbSpeed;
     [SerializeField] bool isClimbing;
- 
+
+    [SerializeField] Vector3 startpositie;
     float counter;
 
     private enum ClimbState
@@ -42,9 +43,13 @@ public class PlayerMovment : MonoBehaviour
         climbing
 
     }
-
+    private void Start()
+    {
+        startpositie= transform.position;
+    }
     private void Update()
     {
+
         isGrounded = Physics.Raycast(groundedCheck.position, Vector3.down, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -68,16 +73,20 @@ public class PlayerMovment : MonoBehaviour
 
     private void Stamina()
     {
-        if (!tired && stamina <= 0)
+        if (!tired&& isSprinting && stamina >= 0)
         {
             counter += Time.deltaTime * staminaSpeed;
             if (counter > 0.1f)
             {
                 stamina--;
-                tired = true ;
                 counter = 0;
             }
+            if (stamina == 0)
+            {
+                tired = true;
+            }
         }
+
         else if (!isSprinting && stamina < 100)
         {
             counter += Time.deltaTime * staminaSpeed;
@@ -87,20 +96,31 @@ public class PlayerMovment : MonoBehaviour
                 counter = 0;
             }
         }
-
+        else if (tired)
+        {
+            movementSpeed = 5f;
+            counter += Time.deltaTime * staminaSpeed;
+            if (counter > 0.1f)
+            {
+                stamina++;
+                counter = 0;
+            }
+            if (stamina == 100)
+            {
+                tired = false;
+            }
+        }
     }
 
     public void DoMoving(InputAction.CallbackContext context)
     {
         input = context.ReadValue<Vector2>();
-                horizontalMovement = new Vector3(input.x, 0, input.y).normalized * movementSpeed;
-
-        
+        Move();
     }
 
     public void DoJumping(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded&& climbState == ClimbState.jumping&&!tired)
+        if (context.performed && isGrounded&& climbState == ClimbState.jumping)
         {
             velocity.y = Mathf.Sqrt(jumpStrength * -2f * gravity);  
         }
@@ -125,7 +145,7 @@ public class PlayerMovment : MonoBehaviour
 
     public void DoRunning(InputAction.CallbackContext context)
     {
-        if (context.performed && stamina > 0 && !tired)
+        if (context.performed && stamina > 0 && !tired&&isGrounded)
         {
             isSprinting = true;
             movementSpeed = sprintSpeed;
@@ -140,13 +160,14 @@ public class PlayerMovment : MonoBehaviour
 
     private void Move()
     {
+        horizontalMovement = new Vector3(input.x, 0, input.y).normalized * movementSpeed;
         Vector3 finalMovement = horizontalMovement + new Vector3(0, velocity.y, 0);
         characterController.Move(finalMovement * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("climbable")&& other.gameObject.layer == LayerMask.NameToLayer("Climable"))
+        if (other.gameObject.CompareTag("climbable"))
         {
             climbState = ClimbState.climbing;
         }

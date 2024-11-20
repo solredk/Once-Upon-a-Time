@@ -46,6 +46,22 @@ public class TagGameManager : GameManager
             if (tagScript.State == Tag.PlayerState.tikker)
             { 
                 textMeshProUGUI[2].text = "Tikker: " + tagScript.username;
+                if (tagScript.username == "blue")
+                {
+                    textMeshProUGUI[2].color = Color.blue;
+                }
+                else if (tagScript.username == "red")
+                {
+                    textMeshProUGUI[2].color = Color.red;
+                }
+                else if (tagScript.username == "white")
+                {
+                    textMeshProUGUI[2].color = Color.white;
+                }
+                else if (tagScript.username == "yellow")
+                {
+                    textMeshProUGUI[2].color = Color.yellow;
+                }
             }
         }
     }

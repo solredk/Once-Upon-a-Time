@@ -58,6 +58,7 @@ public abstract class GameManager : MonoBehaviour
                 CollectData();
                 break;
             case GameState.Endgame:
+                PlayerPrefs.SetInt("game", 1);
                 GetComponent<UIManager>().GoToLeaderboard();
                 break;
                 
@@ -82,7 +83,6 @@ public abstract class GameManager : MonoBehaviour
 
     protected virtual void CollectData()
     {
-        //playerInt = playercount;
         state = GameState.Endgame;
     }
 
