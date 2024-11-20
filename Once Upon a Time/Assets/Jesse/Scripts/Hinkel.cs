@@ -17,12 +17,14 @@ public class Hinkel : MonoBehaviour
 
     private Dictionary<KeyCode, Image> keyImageMapping;
 
-    private float randomTime;
+    private float randomTime1;
+    private float randomTime2;
     public float speed;
 
     void Start()
     {
-        randomTime = Random.Range(2f, 8f);
+        randomTime1 = Random.Range(4f, 6f);
+        randomTime2 = Random.Range(0.5f, 3f);
 
         foreach(Image image in keyImages)
         {
@@ -55,19 +57,17 @@ public class Hinkel : MonoBehaviour
 
     private IEnumerator showImage1()
     {
-        yield return new WaitForSeconds(randomTime);
+        yield return new WaitForSeconds(randomTime1);
         randomImage1 = GetRandomImages(keyImages, 1);
         randomImage1[0].enabled = true;
-        StopCoroutine(showImage1());
     }
 
     private IEnumerator showImage2()
     {
-        yield return new WaitForSeconds(randomTime);
+        yield return new WaitForSeconds(randomTime2);
         randomImage2 = GetRandomImages(keyImages, 2);
         randomImage2[0].enabled = true;
         randomImage2[1].enabled = true;
-        StopCoroutine(showImage2());
     }
 
     private IEnumerator StartGame()
@@ -75,7 +75,6 @@ public class Hinkel : MonoBehaviour
         yield return new WaitForSeconds(1);
         playerLocation.transform.position = Vector3.MoveTowards(playerLocation.transform.position, nextLocations[1].position, speed);
         nextLocations.Remove(nextLocations[0]);
-        StopCoroutine(StartGame());
     }
 
     private void CheckKeyPress1()

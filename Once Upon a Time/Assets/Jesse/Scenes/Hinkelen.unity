@@ -1787,7 +1787,7 @@ MonoBehaviour:
   - {fileID: 1729354380}
   - {fileID: 947371040}
   - {fileID: 178392490}
-  speed: 2
+  speed: 5
 --- !u!54 &1989299720
 Rigidbody:
   m_ObjectHideFlags: 0
