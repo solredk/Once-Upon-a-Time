@@ -52,16 +52,11 @@ public class Hinkel : MonoBehaviour
     List<Image> GetRandomImages(List<Image> inputList, int count)
     {
         List<Image> outputList = new List<Image>();
-        List<Image> availableImages = new List<Image>(inputList);
 
         for (int i = 0; i < count; i++)
         {
-            if (availableImages.Count == 0) break;
-
-
             int index = Random.Range(0, inputList.Count);
             outputList.Add(inputList[index]);
-            //availableImages.RemoveAt(index);
         }
         return outputList;
     }
