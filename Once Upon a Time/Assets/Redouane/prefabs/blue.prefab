@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 1884510655546562243}
   - component: {fileID: 4325025346775266474}
   - component: {fileID: 7790692708683703923}
-  - component: {fileID: 5883958361419842124}
   - component: {fileID: 87495462971332741}
+  - component: {fileID: -2095618280376802091}
   m_Layer: 0
   m_Name: blue
   m_TagString: Player
@@ -200,7 +200,7 @@ MonoBehaviour:
     m_ActionName: knikkeren/schieten[/Mouse/leftButton,/Keyboard/w]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5883958361419842124}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: tikken, Assembly-CSharp
         m_MethodName: DoTaggen
         m_Mode: 0
@@ -280,24 +280,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5883958361419842124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 738091241747439118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9745954e96bcb340b37a219c6676cc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  username: blue
-  state: 1
-  closestPlayer: {fileID: 0}
-  inTagRadius: 0
-  SurviveTime: 0
-  tagged: 0
 --- !u!65 &87495462971332741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -319,6 +301,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2095618280376802091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738091241747439118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9745954e96bcb340b37a219c6676cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username: blue
+  state: 0
+  closestPlayer: {fileID: 0}
+  inTagRadius: 0
+  SurviveTime: 0
+  tagged: 0
 --- !u!1 &7260767343821590360
 GameObject:
   m_ObjectHideFlags: 0
