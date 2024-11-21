@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - climbable
+  - 1 vakje
+  - 2 vakjes
   layers:
   - Default
   - TransparentFX
