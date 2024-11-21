@@ -14,7 +14,7 @@ public class Finish : MonoBehaviour
         if (other.gameObject.CompareTag("Player1"))
         {
             Destroy(other.gameObject);
-            Instantiate(player, spawnLocation);
+            Instantiate(player, spawnLocation.transform.position, Quaternion.identity);
         }
     }
 }
