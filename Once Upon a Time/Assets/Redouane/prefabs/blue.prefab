@@ -199,10 +199,6 @@ MonoBehaviour:
     m_ActionId: 4a7889f7-2965-4c44-9771-cd4cd9750571
     m_ActionName: knikkeren/schieten[/Mouse/leftButton,/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 512cdba2-8562-45a5-a5b7-4fd5ff1ea8ae
-    m_ActionName: pauze/pauze[/Keyboard/escape]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5883958361419842124}
         m_TargetAssemblyTypeName: tikken, Assembly-CSharp
@@ -218,6 +214,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8e8a4a03-c876-42c6-a604-9521f89838af
     m_ActionName: tikkertje/taggen[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8587890b-405c-4b2c-821d-8992519041aa
+    m_ActionName: tikkertje/pauze[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: tikkertje
@@ -253,6 +253,7 @@ MonoBehaviour:
   jumpStrength: 4
   climbSpeed: 7
   isClimbing: 0
+  startpositie: {x: 0, y: 0, z: 0}
 --- !u!143 &7790692708683703923
 CharacterController:
   m_ObjectHideFlags: 0

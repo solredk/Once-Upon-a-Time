@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "pauze",
+                    "type": "Button",
+                    "id": "8587890b-405c-4b2c-821d-8992519041aa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -339,6 +348,28 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f2f4bc85-dffd-4685-8f86-0e19544a4ffb",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "pauze",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "223d085c-8d77-41de-b0b8-b57711960a3b",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "pauze",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -446,45 +477,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "schieten",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "pauze",
-            "id": "0e237d62-8fc0-4296-8dcd-06235bf7c922",
-            "actions": [
-                {
-                    "name": "pauze",
-                    "type": "Button",
-                    "id": "512cdba2-8562-45a5-a5b7-4fd5ff1ea8ae",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "9a85c7de-b342-4c82-8e8f-d87a930f7c20",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "pauze",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2a6a611c-2973-42e4-9b94-fbabbaed4ff8",
-                    "path": "<Gamepad>/select",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "pauze",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

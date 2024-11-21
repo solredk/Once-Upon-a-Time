@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/leaderboard.unity
     guid: 59f9e3cb711ae3b4eb64256b3c1e81d0
+  - enabled: 1
+    path: Assets/scene/Hinkelen.unity
+    guid: e30cde5fa2506ec4186c341bc58ea986
   m_configObjects: {}
