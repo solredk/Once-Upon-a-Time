@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using System;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
 
     [SerializeField] EventSystem EventSystem;
+    [SerializeField] List<Canvas> PauzeMenus;
+    
 
     [SerializeField] List<GameObject> buttons = new List<GameObject>();
     [SerializeField] int index = 0;
@@ -24,6 +27,7 @@ public class UIManager : MonoBehaviour
         {
             EventSystem = GetComponent<EventSystem>();  
         }
+        PauzeMenus[1].enabled = false;
     }
     private void Update()
     {
@@ -34,9 +38,11 @@ public class UIManager : MonoBehaviour
             {
                 EventSystem.SetSelectedGameObject(buttons[index]);
             }
-            Debug.Log(EventSystem.currentSelectedGameObject);
         }
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            DoPauze();
+        }
     }
 
 
@@ -60,18 +66,24 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Hinkelen");
     }
 
-    public void DoPauze(InputAction.CallbackContext context)
+    public void DoPauze()
     {
-        if (!IsPaused)// hiermee kan je de game pauzeren
+        if (PauzeMenus != null)
         {
-            IsPaused = true;
-            Time.timeScale = 0f;
-
-        }
-        else 
-        { 
-        IsPaused =false;
-        Time.timeScale = 1f; 
+            if (!IsPaused)// hiermee kan je de game pauzeren
+            {
+                IsPaused = true;
+                Time.timeScale = 0f;
+                PauzeMenus[0].enabled = false;
+                PauzeMenus[1].enabled = true;
+            }
+            else
+            {
+                IsPaused = false;
+                Time.timeScale = 1f;
+                PauzeMenus[1].enabled = false;
+                PauzeMenus[0].enabled = true;
+            }
         }
     }
 
