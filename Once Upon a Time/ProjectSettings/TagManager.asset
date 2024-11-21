@@ -7,6 +7,7 @@ TagManager:
   - climbable
   - 1 vakje
   - 2 vakjes
+  - Player1
   layers:
   - Default
   - TransparentFX
