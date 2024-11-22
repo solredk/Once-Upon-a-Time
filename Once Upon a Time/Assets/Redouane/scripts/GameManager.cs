@@ -24,7 +24,7 @@ public abstract class GameManager : MonoBehaviour
 
     [Header("de state waar de game in zit")]
     [SerializeField] protected GameState state;
-    [SerializeField] public GameState State { get { return state; } set { state = value; } }
+
 
     [Header("de counters")]
     [SerializeField] protected float Gameduration;
