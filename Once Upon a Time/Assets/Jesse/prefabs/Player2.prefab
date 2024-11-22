@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4415024484653434283}
-  chargeSlider: {fileID: 0}
+  chargeSlider: {fileID: 2858333597042638828, guid: 11baad387b4973541974f5880c7eeb05, type: 3}
 --- !u!135 &6422558589083259312
 SphereCollider:
   m_ObjectHideFlags: 0

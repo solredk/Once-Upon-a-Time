@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class GameManagerKnikkeren : MonoBehaviour
 {
+    public List<GameObject> playerPrefabs;
+
     public Transform objectA;
     public Transform objectB;
+    public Transform beginLocation;
+
+    private PlayerController playerController;
 
     public float distanceThreshold;
 
@@ -18,6 +23,8 @@ public class GameManagerKnikkeren : MonoBehaviour
             if (distance < distanceThreshold)
             {
                 Debug.Log("ja");
+                Instantiate(playerPrefabs[1], beginLocation.transform.position, Quaternion.identity);
+                playerPrefabs.Remove(playerPrefabs[0]);
             }
             else
             {
