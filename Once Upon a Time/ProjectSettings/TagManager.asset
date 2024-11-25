@@ -7,7 +7,10 @@ TagManager:
   - climbable
   - 1 vakje
   - 2 vakjes
-  - Player1
+  - Green
+  - Red
+  - Yellow
+  - Blue
   layers:
   - Default
   - TransparentFX

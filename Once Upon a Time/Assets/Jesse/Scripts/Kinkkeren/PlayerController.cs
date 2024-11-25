@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody rb;
 
-    private bool isShoot;
+    public bool isShoot;
     private bool isCharging;
 
     private float forceMultiplier = 5f;
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+
         rb = GetComponent<Rigidbody>();
 
         rb.drag = 0.1f;
@@ -89,5 +90,15 @@ public class PlayerController : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
 
         isShoot = false;
+    }
+
+    public void ResetShootStatus()
+    {
+        isShoot = false;
+    }
+
+    public void SetControllable(bool canControl)
+    {
+        this.enabled = canControl; // Zet de PlayerController aan of uit
     }
 }

@@ -4,32 +4,80 @@ using UnityEngine;
 
 public class GameManagerKnikkeren : MonoBehaviour
 {
-    public List<GameObject> playerPrefabs;
+    public GameObject marblePrefab;
+    public Transform spawnPoint;
+    public int numberOfPlayers = 4;
 
-    public Transform objectA;
-    public Transform objectB;
-    public Transform beginLocation;
+    public Color[] playerColors;
 
-    private PlayerController playerController;
+    [HideInInspector] public int currentPlayerIndex = 0;
+    private GameObject currentMarble;
+    private bool isWaitingForNextPlayer = false;
 
-    public float distanceThreshold;
+    [HideInInspector] public List<GameObject> spawnedMarbles = new List<GameObject>();
+
+    [HideInInspector] public PointManager pointManager;
+
+    void Start()
+    {
+        if (playerColors.Length < numberOfPlayers)
+        {
+            Debug.LogError("Zorg ervoor dat er genoeg kleuren zijn ingesteld voor alle spelers!");
+            return;
+        }
+
+        SpawnMarbleForPlayer();
+    }
 
     void Update()
     {
-        if (objectA != null && objectB != null)
+        if (currentMarble != null && !isWaitingForNextPlayer)
         {
-            float distance = Vector3.Distance(objectA.position, objectB.position);
+            Rigidbody rb = currentMarble.GetComponent<Rigidbody>();
+            PlayerController controller = currentMarble.GetComponent<PlayerController>();
 
-            if (distance < distanceThreshold)
+            if (rb.velocity.magnitude < 0.01f && controller.isShoot)
             {
-                Debug.Log("ja");
-                Instantiate(playerPrefabs[1], beginLocation.transform.position, Quaternion.identity);
-                playerPrefabs.Remove(playerPrefabs[0]);
-            }
-            else
-            {
-                Debug.Log("nee");
+                StartCoroutine(WaitAndSpawnNextPlayer());
             }
         }
+    }
+
+    public void SpawnMarbleForPlayer()
+    {
+        if (currentPlayerIndex >= numberOfPlayers)
+        {
+            Debug.Log("Het spel is voorbij! Alle spelers hebben geschoten.");
+            pointManager.DetermineClosestMarble();
+            return;
+        }
+
+        currentMarble = Instantiate(marblePrefab, spawnPoint.position, Quaternion.identity);
+        spawnedMarbles.Add(currentMarble);
+
+        Renderer renderer = currentMarble.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.material.color = playerColors[currentPlayerIndex];
+        }
+
+        Debug.Log($"Speler {currentPlayerIndex + 1} is nu aan de beurt!");
+
+        PlayerController controller = currentMarble.GetComponent<PlayerController>();
+        controller.enabled = true;
+
+        isWaitingForNextPlayer = false;
+    }
+
+    IEnumerator WaitAndSpawnNextPlayer()
+    {
+        isWaitingForNextPlayer = true;
+        yield return new WaitForSeconds(3f);
+
+        PlayerController controller = currentMarble.GetComponent<PlayerController>();
+        controller.enabled = false;
+
+        currentPlayerIndex++;
+        SpawnMarbleForPlayer();
     }
 }
