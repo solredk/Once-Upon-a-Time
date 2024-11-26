@@ -452,14 +452,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3387151990420737466, guid: 71ea40b426463bf4aa8824be09bbf62a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 4663032971128102792, guid: 71ea40b426463bf4aa8824be09bbf62a, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4682703516197686787, guid: 71ea40b426463bf4aa8824be09bbf62a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 6297781430746523041, guid: 71ea40b426463bf4aa8824be09bbf62a, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6717241306213043441, guid: 71ea40b426463bf4aa8824be09bbf62a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 7564422646114713338, guid: 71ea40b426463bf4aa8824be09bbf62a, type: 3}
       propertyPath: m_Name
       value: tikkertje_struik (1)
@@ -468,6 +480,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8185824132298469526, guid: 71ea40b426463bf4aa8824be09bbf62a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -606,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2153387528586621797, guid: b86b107e5d5f5ec4d8e2210c6d4c36b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 4458626833240627355, guid: b86b107e5d5f5ec4d8e2210c6d4c36b4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -679,6 +699,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 478713431}
     m_Modifications:
+    - target: {fileID: 505353637744811176, guid: 5386de82a92eb664eabc7e92a5c95746, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 1576895075058506084, guid: 5386de82a92eb664eabc7e92a5c95746, type: 3}
       propertyPath: m_LocalScale.z
       value: 3.0581336
@@ -1005,6 +1029,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 478713431}
     m_Modifications:
+    - target: {fileID: 1576116817470429305, guid: c1313192bd76d0241a55f912236c9742, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 2849822357242153684, guid: c1313192bd76d0241a55f912236c9742, type: 3}
       propertyPath: m_Name
       value: tikkertje_paddenstoel (4)
@@ -1155,14 +1183,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2801516421160609596, guid: 036b491565f001d42ba157309af55855, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 4044113045104315710, guid: 036b491565f001d42ba157309af55855, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4072658691133836683, guid: 036b491565f001d42ba157309af55855, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 4997823208169004084, guid: 036b491565f001d42ba157309af55855, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5299901369291853246, guid: 036b491565f001d42ba157309af55855, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 6782661782511312161, guid: 036b491565f001d42ba157309af55855, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.9924412
@@ -1207,6 +1247,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8010145968199843658, guid: 036b491565f001d42ba157309af55855, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 8830973500822950505, guid: 036b491565f001d42ba157309af55855, type: 3}
       propertyPath: m_Name
       value: tikkertje_struik (2)
@@ -1539,6 +1583,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b6f78326035f1df4c9749ff12991ebb4, type: 2}
+    - target: {fileID: 1911378451750851458, guid: 81eac4be18df912419b3e1204b324941, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 3896460159988655866, guid: 81eac4be18df912419b3e1204b324941, type: 3}
       propertyPath: m_LocalPosition.x
       value: 95.05185
@@ -1819,6 +1867,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 471154217744634661, guid: 514049d2fde72454dac907abf889a1e4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 2065063013815751148, guid: 514049d2fde72454dac907abf889a1e4, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.9924412
@@ -1863,6 +1915,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4668686398195823218, guid: 514049d2fde72454dac907abf889a1e4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 5547223709255522664, guid: 514049d2fde72454dac907abf889a1e4, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -1879,6 +1935,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8742073237673439174, guid: 514049d2fde72454dac907abf889a1e4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     - target: {fileID: 9150307607951329544, guid: 514049d2fde72454dac907abf889a1e4, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -2279,6 +2339,7 @@ GameObject:
   - component: {fileID: 1674522392}
   - component: {fileID: 1674522391}
   - component: {fileID: 1674522390}
+  - component: {fileID: 1674522393}
   - component: {fileID: 1674522389}
   - component: {fileID: 1674522388}
   m_Layer: 3
@@ -2350,7 +2411,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b6f78326035f1df4c9749ff12991ebb4, type: 2}
+  - {fileID: 2100000, guid: f1bafd9e276e561439cbb124bdf70541, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2395,6 +2456,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1674522393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674522387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0087613914ed91c45882c66698d80a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 10
+  fadeAmount: 0.5
+  transparentMaterial: {fileID: 2100000, guid: f1bafd9e276e561439cbb124bdf70541, type: 2}
+  originalMaterial: {fileID: 2100000, guid: b6f78326035f1df4c9749ff12991ebb4, type: 2}
+  doFade: 0
 --- !u!4 &1827500875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4591088982331980232, guid: 7d50190c32d84ff4791d5f2b6e655147, type: 3}
@@ -2612,6 +2690,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8236799025365535483, guid: ef3cbbc0e3fad20429ee30eed52779dd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6aa293c75822d4d8488fd628231a45, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

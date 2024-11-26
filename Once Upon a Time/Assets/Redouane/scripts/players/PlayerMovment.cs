@@ -34,7 +34,6 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float climbSpeed;
     [SerializeField] bool isClimbing;
 
-    [SerializeField] Transform spawnpoint;
     float counter;
 
     private enum ClimbState
@@ -43,21 +42,10 @@ public class PlayerMovment : MonoBehaviour
         climbing
 
     }
-    private void Start()
-    {
-        spawnpoint = GameObject.Find("Spawnpoint").transform;
-    }
+
     private void Update()
     {
-        if (spawnpoint == null)
-        {
-                    spawnpoint = GameObject.Find("Spawnpoint").transform;
-        }
         isGrounded = Physics.Raycast(groundedCheck.position, Vector3.down, groundDistance, groundMask);
-        if (transform.position.y < -100f)
-        {
-            transform.position = spawnpoint.position;
-         }
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = 0f;  
