@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4173359214095606460
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 42.35237
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.76
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.003115
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7921274
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6103559
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -75.23
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_Name
+      value: paddenstoel 1 official
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317578925029434746, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e031b5b8f633bc49b6bada3a6054093, type: 2}
+    - target: {fileID: 8100320773420232829, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e031b5b8f633bc49b6bada3a6054093, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40bb6b80d90b8c340a5c8cd6476d39e7, type: 3}
