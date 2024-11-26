@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManagerKnikkeren : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameManagerKnikkeren : MonoBehaviour
 
     public Color[] playerColors;
 
+    public Slider chargeSlider;
+
     [HideInInspector] public int currentPlayerIndex = 0;
     private GameObject currentMarble;
     private bool isWaitingForNextPlayer = false;
@@ -18,12 +21,23 @@ public class GameManagerKnikkeren : MonoBehaviour
 
     [HideInInspector] public PointManager pointManager;
 
+    private bool isCharging = false;
+    private float chargeTime = 0f;
+    private float maxChargeTime = 3f;
+
     void Start()
     {
         if (playerColors.Length < numberOfPlayers)
         {
             Debug.LogError("Zorg ervoor dat er genoeg kleuren zijn ingesteld voor alle spelers!");
             return;
+        }
+
+        if (chargeSlider != null)
+        {
+            chargeSlider.gameObject.SetActive(false);
+            chargeSlider.maxValue = maxChargeTime;
+            chargeSlider.value = 0;
         }
 
         SpawnMarbleForPlayer();
@@ -40,6 +54,46 @@ public class GameManagerKnikkeren : MonoBehaviour
             {
                 StartCoroutine(WaitAndSpawnNextPlayer());
             }
+
+            HandleCharging(controller);
+        }
+    }
+
+    void HandleCharging(PlayerController controller)
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !controller.isShoot)
+        {
+            isCharging = true;
+            chargeTime = 0f;
+
+            if (chargeSlider != null)
+            {
+                chargeSlider.gameObject.SetActive(true);
+                chargeSlider.value = 0;
+            }
+        }
+
+        if (isCharging)
+        {
+            chargeTime += Time.deltaTime;
+            chargeTime = Mathf.Clamp(chargeTime, 0, maxChargeTime);
+
+            if (chargeSlider != null)
+            {
+                chargeSlider.value = chargeTime;
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space) && isCharging)
+        {
+            isCharging = false;
+
+            if (chargeSlider != null)
+            {
+                chargeSlider.gameObject.SetActive(false);
+            }
+
+            controller.Shoot(chargeTime);
         }
     }
 
@@ -48,6 +102,7 @@ public class GameManagerKnikkeren : MonoBehaviour
         if (currentPlayerIndex >= numberOfPlayers)
         {
             Debug.Log("Het spel is voorbij! Alle spelers hebben geschoten.");
+            pointManager.DetermineClosestMarble();
             return;
         }
 
