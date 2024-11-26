@@ -48,7 +48,6 @@ public class GameManagerKnikkeren : MonoBehaviour
         if (currentPlayerIndex >= numberOfPlayers)
         {
             Debug.Log("Het spel is voorbij! Alle spelers hebben geschoten.");
-            pointManager.DetermineClosestMarble();
             return;
         }
 
@@ -66,16 +65,31 @@ public class GameManagerKnikkeren : MonoBehaviour
         PlayerController controller = currentMarble.GetComponent<PlayerController>();
         controller.enabled = true;
 
+        LineRenderer lineRenderer = currentMarble.GetComponent<LineRenderer>();
+        if (lineRenderer != null)
+        {
+            lineRenderer.enabled = true;
+        }
+
         isWaitingForNextPlayer = false;
     }
 
     IEnumerator WaitAndSpawnNextPlayer()
     {
+        if (isWaitingForNextPlayer)
+            yield break;
+
         isWaitingForNextPlayer = true;
         yield return new WaitForSeconds(3f);
 
         PlayerController controller = currentMarble.GetComponent<PlayerController>();
         controller.enabled = false;
+
+        LineRenderer lineRenderer = currentMarble.GetComponent<LineRenderer>();
+        if (lineRenderer != null)
+        {
+            lineRenderer.enabled = false;
+        }
 
         currentPlayerIndex++;
         SpawnMarbleForPlayer();

@@ -14,14 +14,18 @@ public class PlayerController : MonoBehaviour
     private float chargeTime;
     private float maxChargeTime = 3f;
 
+    private float rotationAngle = 0f;
+    private float rotationSpeed = 90f;
+
     private Vector3 shootDirection;
 
     public Slider chargeSlider;
+    public LineRenderer lineRenderer;
 
     void Start()
     {
-
         rb = GetComponent<Rigidbody>();
+        //chargeSlider = FindAnyObjectByType<Slider>();
 
         rb.drag = 0.1f;
         rb.angularDrag = 0.05f;
@@ -29,11 +33,20 @@ public class PlayerController : MonoBehaviour
         chargeSlider.value = 0;
         chargeSlider.maxValue = maxChargeTime;
         chargeSlider.gameObject.SetActive(false);
+
+        if (lineRenderer != null)
+        {
+            lineRenderer.positionCount = 2;
+            lineRenderer.enabled = true;
+        }
     }
 
     void Update()
     {
-        UpdateShootDirection();
+        if (!isShoot)
+        {
+            UpdateShootDirection();
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && !isShoot)
         {
@@ -59,13 +72,24 @@ public class PlayerController : MonoBehaviour
 
     void UpdateShootDirection()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Plane plane = new Plane(Vector3.up, transform.position);
-
-        if (plane.Raycast(ray, out float distance))
+        if (Input.GetKey(KeyCode.A))
         {
-            Vector3 hitPoint = ray.GetPoint(distance);
-            shootDirection = (hitPoint - transform.position).normalized;
+            rotationAngle -= rotationSpeed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            rotationAngle += rotationSpeed * Time.deltaTime;
+        }
+
+        float radians = rotationAngle * Mathf.Deg2Rad;
+        shootDirection = new Vector3(Mathf.Sin(radians), 0, Mathf.Cos(radians)).normalized;
+
+        if (lineRenderer != null)
+        {
+            Vector3 startPoint = transform.position;
+            Vector3 endPoint = startPoint + shootDirection * 2f;
+            lineRenderer.SetPosition(0, startPoint);
+            lineRenderer.SetPosition(1, endPoint);
         }
     }
 
@@ -79,6 +103,11 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(shootDirection * calculatedForce, ForceMode.Impulse);
         isShoot = true;
 
+        if (lineRenderer != null)
+        {
+            lineRenderer.enabled = false;
+        }
+
         StartCoroutine(ResetBallVelocityAfterTime(5f));
     }
 
@@ -90,6 +119,11 @@ public class PlayerController : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
 
         isShoot = false;
+
+        if (lineRenderer != null)
+        {
+            lineRenderer.enabled = true;
+        }
     }
 
     public void ResetShootStatus()
@@ -99,6 +133,6 @@ public class PlayerController : MonoBehaviour
 
     public void SetControllable(bool canControl)
     {
-        this.enabled = canControl; // Zet de PlayerController aan of uit
+        this.enabled = canControl;
     }
 }
