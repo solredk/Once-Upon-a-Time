@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //chargeSlider = FindAnyObjectByType<Slider>();
+        chargeSlider = FindAnyObjectByType<Slider>();
 
         rb.drag = 0.1f;
         rb.angularDrag = 0.05f;
