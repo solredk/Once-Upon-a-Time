@@ -16,7 +16,7 @@ public class GameManagerKnikkeren : MonoBehaviour
 
     [HideInInspector] public List<GameObject> spawnedMarbles = new List<GameObject>();
 
-    [HideInInspector] public PointManager pointManager;
+    public PointManager pointManager;
 
     void Start()
     {
@@ -48,6 +48,7 @@ public class GameManagerKnikkeren : MonoBehaviour
         if (currentPlayerIndex >= numberOfPlayers)
         {
             Debug.Log("Het spel is voorbij! Alle spelers hebben geschoten.");
+            pointManager.DetermineClosestMarble();
             return;
         }
 

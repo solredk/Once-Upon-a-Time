@@ -1429,7 +1429,7 @@ MonoBehaviour:
   - {r: 0, g: 0.20210934, b: 1, a: 0}
   currentPlayerIndex: 0
   spawnedMarbles: []
-  pointManager: {fileID: 0}
+  pointManager: {fileID: 1518327929}
 --- !u!4 &1438551698
 Transform:
   m_ObjectHideFlags: 0

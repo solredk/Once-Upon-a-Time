@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
 
         if (lineRenderer != null)
         {
-            lineRenderer.enabled = true;
+            lineRenderer.enabled = false;
         }
     }
 
