@@ -12,6 +12,9 @@ TagManager:
   - Yellow
   - Blue
   - ChargeSlider
+  - Player1
+  - Spawnpoint
+  - Barrier
   layers:
   - Default
   - TransparentFX

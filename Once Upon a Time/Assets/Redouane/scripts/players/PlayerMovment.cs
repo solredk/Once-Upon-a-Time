@@ -34,7 +34,7 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float climbSpeed;
     [SerializeField] bool isClimbing;
 
-    [SerializeField] Vector3 startpositie;
+    [SerializeField] Transform spawnpoint;
     float counter;
 
     private enum ClimbState
@@ -45,13 +45,19 @@ public class PlayerMovment : MonoBehaviour
     }
     private void Start()
     {
-        startpositie= transform.position;
+        spawnpoint = GameObject.Find("Spawnpoint").transform;
     }
     private void Update()
     {
-
+        if (spawnpoint == null)
+        {
+                    spawnpoint = GameObject.Find("Spawnpoint").transform;
+        }
         isGrounded = Physics.Raycast(groundedCheck.position, Vector3.down, groundDistance, groundMask);
-
+        if (transform.position.y < -100f)
+        {
+            transform.position = spawnpoint.position;
+         }
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = 0f;  
@@ -172,7 +178,13 @@ public class PlayerMovment : MonoBehaviour
             climbState = ClimbState.climbing;
         }
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Barrier"))
+        {
+            transform.position = new Vector3(0, 0, 0);
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("climbable"))
