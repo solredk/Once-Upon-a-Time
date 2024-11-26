@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody rb;
 
-    public bool isShoot;
+    [HideInInspector] public bool isShoot;
 
     private float forceMultiplier = 5f;
     private float rotationAngle = 0f;
