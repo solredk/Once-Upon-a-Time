@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
         {
             EventSystem = GetComponent<EventSystem>();  
         }
+        if (PauzeMenus.Count >= 1)
         PauzeMenus[1].enabled = false;
     }
     private void Update()
@@ -68,7 +69,7 @@ public class UIManager : MonoBehaviour
 
     public void DoPauze()
     {
-        if (PauzeMenus != null)
+        if (PauzeMenus.Count >= 1)
         {
             if (!IsPaused)// hiermee kan je de game pauzeren
             {

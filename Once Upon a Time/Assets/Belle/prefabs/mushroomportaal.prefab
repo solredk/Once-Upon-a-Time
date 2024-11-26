@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2826039068049248975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.567706
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.567706
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.567706
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 48.22
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.110262506
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9939025
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -167.339
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4657324130084713748, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adfd3e6cf8899f347b45e499b2ef8aaf, type: 2}
+    - target: {fileID: -1461304994638716399, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adfd3e6cf8899f347b45e499b2ef8aaf, type: 2}
+    - target: {fileID: -380819971150687662, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adfd3e6cf8899f347b45e499b2ef8aaf, type: 2}
+    - target: {fileID: 919132149155446097, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_Name
+      value: mushroomportaal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3729964425998498954, guid: a56e421e263b240469e08618090b2ada, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41db43645a866254db47b7379467acdf, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a56e421e263b240469e08618090b2ada, type: 3}
