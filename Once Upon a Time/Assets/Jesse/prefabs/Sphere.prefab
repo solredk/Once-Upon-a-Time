@@ -101,7 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 799643412835500973}
   isShoot: 0
-  chargeSlider: {fileID: 7509126627951480710, guid: 3b4635cc19240904098d848065d3425b, type: 3}
   lineRenderer: {fileID: 5308246089234851133}
 --- !u!135 &714108145701364204
 SphereCollider:
