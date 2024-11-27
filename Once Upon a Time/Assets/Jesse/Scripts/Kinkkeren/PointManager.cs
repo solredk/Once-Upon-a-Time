@@ -43,7 +43,7 @@ public class PointManager : MonoBehaviour
 
         if (closestPlayerIndex != -1)
         {
-            playerScores[closestPlayerIndex]++;
+            PlayerPrefs.SetFloat("closestPlayerScore" , playerScores[closestPlayerIndex]++);
             Debug.Log($"Speler {closestPlayerIndex + 1} krijgt een punt! Totaal: {playerScores[closestPlayerIndex]} punten.");
         }
 

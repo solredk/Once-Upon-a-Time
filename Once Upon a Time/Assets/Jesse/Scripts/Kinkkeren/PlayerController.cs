@@ -76,23 +76,6 @@ public class PlayerController : MonoBehaviour
         {
             lineRenderer.enabled = false;
         }
-
-        StartCoroutine(ResetBallVelocityAfterTime(5f));
-    }
-
-    IEnumerator ResetBallVelocityAfterTime(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-
-        isShoot = false;
-
-        if (lineRenderer != null)
-        {
-            lineRenderer.enabled = false;
-        }
     }
 
     public void ResetShootStatus()
