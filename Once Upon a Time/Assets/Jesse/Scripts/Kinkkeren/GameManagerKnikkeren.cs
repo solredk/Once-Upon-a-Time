@@ -23,7 +23,7 @@ public class GameManagerKnikkeren : MonoBehaviour
 
     private bool isCharging = false;
     private float chargeTime = 0f;
-    private float maxChargeTime = 5f;
+    private float maxChargeTime = 3f;
 
     void Start()
     {
