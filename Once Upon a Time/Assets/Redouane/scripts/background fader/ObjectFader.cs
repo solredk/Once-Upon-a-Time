@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class ObjectFader : MonoBehaviour
 {
-    [SerializeField] float fadeSpeed = 0.1f; // Snelheid van de fade-overgang
-    [SerializeField] float fadeAmount = 0.1f; // De dofheid/sterkte van de transparantie
-    float originalAlpha; // De originele alpha waarde van het materiaal
+    [SerializeField] Material baseMaterial;
+    [SerializeField] Material fadeMaterial;
+
 
     Renderer renderer;
-    Material material;
-    [SerializeField] Material transparentMaterial; // Transparant materiaal
-    [SerializeField] Material originalMaterial; // Oorspronkelijk materiaal
-
-    Color currentColor;
-    Color smoothColor;
 
     [SerializeField] bool doFade;
 
@@ -22,48 +16,18 @@ public class ObjectFader : MonoBehaviour
     void Start()
     {
         renderer = GetComponent<Renderer>();
-        material = renderer.material; // Gebruik het huidige materiaal van de renderer
-        originalAlpha = material.color.a; // Sla de originele alpha waarde op
+        renderer.sharedMaterial = baseMaterial;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (doFade)
-        {
-            DoFade();
-        }
-        else
-        {
-            ResetFade();
-        }
+         renderer.material = new Material(fadeMaterial);       
     }
-
-    void DoFade()
+    private void OnTriggerStay(Collider other)
     {
-        // Zorg ervoor dat het materiaal transparant is als fade aan is
-        if (material != transparentMaterial)
-        {
-            material = new Material(transparentMaterial);
-            renderer.material = material;
-        }
-
-        currentColor = material.color;
-        smoothColor = new Color(currentColor.r, currentColor.g, currentColor.b, Mathf.Lerp(currentColor.a, fadeAmount, fadeSpeed));
-        material.color = smoothColor;
+        renderer.material = new Material(fadeMaterial);
     }
-
-    void ResetFade()
+    private void OnTriggerExit(Collider other)
     {
-        // Zet het materiaal terug naar het originele materiaal
-        if (material != originalMaterial)
-        {
-            material = new Material(originalMaterial);
-            renderer.material = material;
-        }
-
-        currentColor = material.color;
-        smoothColor = new Color(currentColor.r, currentColor.g, currentColor.b, Mathf.Lerp(currentColor.a, originalAlpha, fadeSpeed));
-        material.color = smoothColor;
+        renderer.material = new Material(baseMaterial);        
     }
 }

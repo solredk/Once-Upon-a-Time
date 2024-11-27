@@ -13,6 +13,8 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     [SerializeField] ClimbState climbState;
 
+    [SerializeField] Animator animator;
+
     Vector2 input;
     Vector3 velocity;
     Vector3 horizontalMovement;
@@ -23,6 +25,8 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float gravity = -9.81f;
     [SerializeField] bool isGrounded;
     [SerializeField] float staminaSpeed;
+    [SerializeField] float rotationSpeed = 3;
+
     [Header("sprinting")]
     [SerializeField] float sprintSpeed = 10f;
     [SerializeField] float stamina = 100;
@@ -104,6 +108,24 @@ public class PlayerMovment : MonoBehaviour
                 tired = false;
             }
         }
+
+        Animator();
+    }
+
+    private void Animator()
+    {
+        if (input.x != 0 || input.y != 0)
+        {
+            animator.SetFloat("speed", 1);
+        }
+        else
+        {
+            animator.SetFloat("speed", 0);
+        }
+        if (isGrounded)
+        {
+           // animator.SetBool("jumping", false);
+        }
     }
 
     public void DoMoving(InputAction.CallbackContext context)
@@ -116,7 +138,8 @@ public class PlayerMovment : MonoBehaviour
     {
         if (context.performed && isGrounded&& climbState == ClimbState.jumping)
         {
-            velocity.y = Mathf.Sqrt(jumpStrength * -2f * gravity);  
+            velocity.y = Mathf.Sqrt(jumpStrength * -2f * gravity);
+           // animator.SetBool("jumping", true);
         }
         else if (context.performed && isGrounded && climbState == ClimbState.climbing)
         {
@@ -133,7 +156,12 @@ public class PlayerMovment : MonoBehaviour
     {
         if (isClimbing && climbState == ClimbState.climbing)
         {
-             velocity.y = climbSpeed;           
+             velocity.y = climbSpeed;
+            animator.SetBool("climbing", true);
+        }
+        else if (!isClimbing)
+        {
+            animator.SetBool("climbing", false);
         }
     }
 
@@ -154,9 +182,19 @@ public class PlayerMovment : MonoBehaviour
 
     private void Move()
     {
-        horizontalMovement = new Vector3(input.x, 0, input.y).normalized * movementSpeed;
-        Vector3 finalMovement = horizontalMovement + new Vector3(0, velocity.y, 0);
-        characterController.Move(finalMovement * Time.deltaTime);
+
+        Vector3 direction = new Vector3(input.x, 0, input.y).normalized;
+        if (direction.magnitude >= 0.1f)
+        {
+            // Draai het object naar de richting van de beweging
+            Quaternion toRotation = Quaternion.LookRotation(direction); // Rotatie naar de richting van de beweging
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime); // Zorg ervoor dat de rotatie niet te snel gaat
+
+            // Beweging toepassen
+            horizontalMovement = direction * movementSpeed;
+            Vector3 finalMovement = horizontalMovement + new Vector3(0, velocity.y, 0);
+            characterController.Move(finalMovement * Time.deltaTime);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
