@@ -135,7 +135,7 @@ public class GameManagerKnikkeren : MonoBehaviour
             yield break;
 
         isWaitingForNextPlayer = true;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
 
         PlayerController controller = currentMarble.GetComponent<PlayerController>();
         controller.enabled = false;

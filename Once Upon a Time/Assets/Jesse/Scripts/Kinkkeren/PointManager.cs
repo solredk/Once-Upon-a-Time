@@ -7,6 +7,11 @@ public class PointManager : MonoBehaviour
     public Transform endPoint;
     public GameManagerKnikkeren gameManager;
     public Dictionary<int, int> playerScores = new Dictionary<int, int>();
+    [HideInInspector] public string playerKey;
+
+    [HideInInspector] public float closestDistance = float.MaxValue;
+    [HideInInspector] public int closestPlayerIndex = -1;
+    [HideInInspector] public GameObject closestMarble = null;
 
     void Start()
     {
@@ -24,10 +29,6 @@ public class PointManager : MonoBehaviour
             return;
         }
 
-        float closestDistance = float.MaxValue;
-        int closestPlayerIndex = -1;
-        GameObject closestMarble = null;
-
         for (int i = 0; i < gameManager.spawnedMarbles.Count; i++)
         {
             GameObject marble = gameManager.spawnedMarbles[i];
@@ -43,8 +44,7 @@ public class PointManager : MonoBehaviour
 
         if (closestPlayerIndex != -1)
         {
-            playerScores[closestPlayerIndex]++;
-            Debug.Log($"Speler {closestPlayerIndex + 1} krijgt een punt! Totaal: {playerScores[closestPlayerIndex]} punten.");
+            Knikkeren();
         }
 
         RemoveAllMarbles();
@@ -67,5 +67,17 @@ public class PointManager : MonoBehaviour
     {
         gameManager.currentPlayerIndex = 0;
         gameManager.SpawnMarbleForPlayer();
+    }
+
+    public void Knikkeren()
+    {
+        playerScores[closestPlayerIndex] += 1;
+
+        Debug.Log($"Speler {closestPlayerIndex + 1} krijgt een punt! Totaal: {playerScores[closestPlayerIndex]} punten.");
+
+        playerKey = $"PlayerScore_{closestPlayerIndex + 1}";
+        PlayerPrefs.SetInt(playerKey, playerScores[closestPlayerIndex]);
+
+        PlayerPrefs.Save();
     }
 }
