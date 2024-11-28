@@ -38,10 +38,10 @@ public class LeaderboardManager : MonoBehaviour
         
         for (int i = 0; i < usernames.Count; i++)
         {
-            keyValuePairs.Add(tag, scores[i]);
+            keyValuePairs.Add(usernames[i], scores[i]);
         }
 
-        keyValuePairs = keyValuePairs.OrderBy(tvalue => tvalue.Value).ToList().ToDictionary(x => x.Key, x => x.Value); ;
+        keyValuePairs = keyValuePairs.OrderByDescending(tvalue => tvalue.Value).ToDictionary(x => x.Key, x => x.Value);
 
 
         scoreboardText.text = "";

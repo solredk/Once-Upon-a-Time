@@ -16,10 +16,6 @@ public class ObjectFader : MonoBehaviour
 
     Renderer renderer;
 
-
-    [SerializeField] bool doFade;
-
-    // Start is called before the first frame update
     void Start()
     {
         renderer = GetComponent<Renderer>();
