@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -189,6 +193,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -281,13 +297,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52876940}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.29894266, y: 0.64774007, z: -0.3086201, w: -0.6291421}
-  m_LocalPosition: {x: 105.46, y: 24.61, z: 72.66868}
+  m_LocalRotation: {x: -0.27265078, y: 0.6592385, z: -0.2830684, w: -0.6410448}
+  m_LocalPosition: {x: 84.74, y: 20.08, z: 72.66868}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50.893, y: -91.623, z: 0.096}
+  m_LocalEulerAnglesHint: {x: 46.285, y: -91.482, z: 0.285}
 --- !u!1001 &54894157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -299,6 +315,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -356,6 +376,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -372,6 +404,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -429,6 +465,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -445,6 +493,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -502,6 +554,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -518,6 +582,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -573,6 +641,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -743,6 +823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -797,6 +881,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -932,6 +1028,10 @@ PrefabInstance:
     - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_Name
       value: struik groen prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1109,6 +1209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -1165,6 +1269,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1181,6 +1297,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -1236,6 +1356,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1349,6 +1481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -1403,6 +1539,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1479,6 +1623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -1533,6 +1681,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1723,6 +1883,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -1779,6 +1943,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1795,6 +1971,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -1852,6 +2032,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1868,6 +2060,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -1925,6 +2121,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1941,6 +2149,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -1998,6 +2210,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186510936344709803, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186510936344709803, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2014,6 +2242,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -2069,6 +2301,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2182,6 +2426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -2236,6 +2484,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2406,6 +2662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -2462,6 +2722,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2478,6 +2750,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -2533,6 +2809,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2854,6 +3142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -2910,6 +3202,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2926,6 +3230,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -3000,6 +3308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -3056,6 +3368,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3069,6 +3389,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17653239203695911, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673521861259970959, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410394405627576516, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607021668925190240, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169673205573998176, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232168813784060802, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348088351666835670, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911070801475128033, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7029429017425937464, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.220697
@@ -3121,9 +3473,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7324522272697142647, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400368922350567677, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556517939891300360, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_Name
       value: struik groen prefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696163703007270125, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3309,6 +3681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -3365,6 +3741,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3381,6 +3765,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -3455,6 +3843,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -3509,6 +3901,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3585,6 +3989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -3658,6 +4066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -3714,6 +4126,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3730,6 +4154,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -3785,6 +4213,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4045,6 +4485,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17653239203695911, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673521861259970959, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410394405627576516, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607021668925190240, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169673205573998176, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232168813784060802, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348088351666835670, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911070801475128033, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7029429017425937464, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.220697
@@ -4097,9 +4569,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7324522272697142647, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400368922350567677, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556517939891300360, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_Name
       value: struik groen prefab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696163703007270125, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4117,6 +4609,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -4172,6 +4668,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4273,6 +4781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -4329,6 +4841,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4345,6 +4869,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -4402,6 +4930,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4418,6 +4958,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -4696,6 +5240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -4752,6 +5300,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4768,6 +5328,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -4825,6 +5389,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4841,6 +5417,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -4896,6 +5476,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5028,6 +5620,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186510936344709803, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186510936344709803, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5096,6 +5704,10 @@ PrefabInstance:
     - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_Name
       value: struik groen prefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5448,6 +6060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -5502,6 +6118,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5826,6 +6454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: struik groen prefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5842,6 +6474,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -5897,6 +6533,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6026,6 +6674,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17653239203695911, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673521861259970959, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410394405627576516, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607021668925190240, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169673205573998176, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232168813784060802, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348088351666835670, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911070801475128033, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7029429017425937464, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.220697
@@ -6078,9 +6758,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7324522272697142647, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400368922350567677, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556517939891300360, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_Name
       value: struik groen prefab (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696163703007270125, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6151,6 +6851,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: struik groen prefab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6167,6 +6871,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -6222,6 +6930,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6316,13 +7036,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900486725}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23710357, y: 0.40675193, z: 0.8760893, w: -0.10393512}
+  m_LocalRotation: {x: 0.15616053, y: 0.44416136, z: 0.84077996, w: -0.26725203}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -49.64, y: 30.728, z: 179.047}
+  m_LocalEulerAnglesHint: {x: -56.135, y: 2.591, z: 213.885}
 --- !u!1001 &1921587828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6334,6 +7054,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -6389,6 +7113,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6490,6 +7226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -6546,6 +7286,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6562,6 +7314,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -6617,6 +7373,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6818,6 +7586,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17653239203695911, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673521861259970959, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410394405627576516, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607021668925190240, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169673205573998176, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232168813784060802, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348088351666835670, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911070801475128033, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7029429017425937464, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.220697
@@ -6870,9 +7670,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7324522272697142647, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400368922350567677, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556517939891300360, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
       propertyPath: m_Name
       value: struik groen prefab (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693939123032120962, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696163703007270125, guid: 517abd59931d44d45b30c2e651609344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6890,6 +7710,10 @@ PrefabInstance:
     - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_Name
       value: boom groot groen prefab (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
@@ -6945,6 +7769,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7115,6 +7951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -7169,6 +8009,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7282,6 +8134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boom groot groen prefab (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 369641174844009931, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.66
@@ -7336,6 +8192,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038900070887405425, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698078613597523424, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276582328767700634, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662175501438251917, guid: c60e9fad882689f46a76a59d11dcf33f, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
