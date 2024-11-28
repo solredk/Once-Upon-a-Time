@@ -954,7 +954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   marblePrefab: {fileID: 6516019648782796371, guid: c891246842a35dd469078a2c4b6aa2d4, type: 3}
   spawnPoint: {fileID: 1258603196}
-  numberOfPlayers: 4
+  numberOfPlayers: 2
   playerColors:
   - {r: 0.0082166195, g: 1, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
@@ -1320,6 +1320,10 @@ PrefabInstance:
     - target: {fileID: 6296189604975162885, guid: 3738b074fb7d2c1449b39c0fccb04801, type: 3}
       propertyPath: m_Name
       value: Level 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746492163646458377, guid: 3738b074fb7d2c1449b39c0fccb04801, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

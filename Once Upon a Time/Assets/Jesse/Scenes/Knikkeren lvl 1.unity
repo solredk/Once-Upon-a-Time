@@ -209,7 +209,7 @@ Transform:
   m_GameObject: {fileID: 47598363}
   serializedVersion: 2
   m_LocalRotation: {x: 0.26223812, y: 0.65668195, z: -0.26223817, w: 0.65668195}
-  m_LocalPosition: {x: -7.65, y: 7.27, z: 0}
+  m_LocalPosition: {x: -7.65, y: 7.27, z: 2.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   marblePrefab: {fileID: 6516019648782796371, guid: c891246842a35dd469078a2c4b6aa2d4, type: 3}
   spawnPoint: {fileID: 279672912}
-  numberOfPlayers: 4
+  numberOfPlayers: 2
   playerColors:
   - {r: 0.0082166195, g: 1, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
@@ -1283,7 +1283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 42947766244662637, guid: e03861cce7758a64fafb3cc803a49d76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.266
       objectReference: {fileID: 0}
     - target: {fileID: 42947766244662637, guid: e03861cce7758a64fafb3cc803a49d76, type: 3}
       propertyPath: m_LocalPosition.z

@@ -15,6 +15,7 @@ TagManager:
   - Player1
   - Spawnpoint
   - Barrier
+  - Knikker
   layers:
   - Default
   - TransparentFX
