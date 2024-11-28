@@ -7,6 +7,7 @@ public class PointManager : MonoBehaviour
     public Transform endPoint;
     public GameManagerKnikkeren gameManager;
     public Dictionary<int, int> playerScores = new Dictionary<int, int>();
+    public string playerKey;
 
     void Start()
     {
@@ -43,8 +44,14 @@ public class PointManager : MonoBehaviour
 
         if (closestPlayerIndex != -1)
         {
-            PlayerPrefs.SetFloat("closestPlayerScore" , playerScores[closestPlayerIndex]++);
+            playerScores[closestPlayerIndex] += 1;
+
             Debug.Log($"Speler {closestPlayerIndex + 1} krijgt een punt! Totaal: {playerScores[closestPlayerIndex]} punten.");
+
+            playerKey = $"PlayerScore_{closestPlayerIndex + 1}";
+            PlayerPrefs.SetInt(playerKey, playerScores[closestPlayerIndex]);
+
+            PlayerPrefs.Save();
         }
 
         RemoveAllMarbles();
