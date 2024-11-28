@@ -20,6 +20,7 @@ public class GameManagerKnikkeren : MonoBehaviour
     [HideInInspector] public List<GameObject> spawnedMarbles = new List<GameObject>();
 
     [HideInInspector] public PointManager pointManager;
+    public CamManager camManager;
 
     private bool isCharging = false;
     private float chargeTime = 0f;
@@ -56,6 +57,21 @@ public class GameManagerKnikkeren : MonoBehaviour
             }
 
             HandleCharging(controller);
+        }
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            camManager.SwitchCamera(camManager.lvl1Cam);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            camManager.SwitchCamera(camManager.lvl2Cam);
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            camManager.SwitchCamera(camManager.lvl3Cam);
         }
     }
 
