@@ -7,8 +7,8 @@ public class PointManager : MonoBehaviour
     public Transform endPoint;
     public GameManagerKnikkeren gameManager;
     public Dictionary<int, int> playerScores = new Dictionary<int, int>();
-    [HideInInspector] public string playerKey;
 
+    [HideInInspector] public string playerKey;
     [HideInInspector] public float closestDistance = float.MaxValue;
     [HideInInspector] public int closestPlayerIndex = -1;
     [HideInInspector] public GameObject closestMarble = null;
