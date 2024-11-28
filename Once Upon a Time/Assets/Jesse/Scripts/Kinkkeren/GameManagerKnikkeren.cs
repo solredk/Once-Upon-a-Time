@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManagerKnikkeren : MonoBehaviour
@@ -24,6 +25,10 @@ public class GameManagerKnikkeren : MonoBehaviour
     private bool isCharging = false;
     private float chargeTime = 0f;
     private float maxChargeTime = 4f;
+
+    private Scene currentScene;
+    private string sceneName;
+    private int sceneIndex;
 
     void Start()
     {
@@ -103,6 +108,22 @@ public class GameManagerKnikkeren : MonoBehaviour
         {
             Debug.Log("Het spel is voorbij! Alle spelers hebben geschoten.");
             pointManager.DetermineClosestMarble();
+
+            currentScene = SceneManager.GetActiveScene();
+
+            sceneName = currentScene.name;
+            sceneIndex = currentScene.buildIndex;
+
+            if (sceneName == "Knikkeren lvl 1")
+            {
+                SceneManager.LoadScene("Knikkeren lvl 2");
+            }
+
+            if (sceneName == "Knikkeren lvl 2")
+            {
+                SceneManager.LoadScene("Knikkeren lvl 3");
+            }
+
             return;
         }
 
