@@ -29,14 +29,15 @@ public class PlayerMovment : MonoBehaviour
 
     [Header("sprinting")]
     [SerializeField] float sprintSpeed = 10f;
-    [SerializeField] float stamina = 100;
+    public float stamina = 100;
     [SerializeField] bool isSprinting;
-    [SerializeField] bool tired;
+    public bool tired;
 
     [Header("jumping")]
     [SerializeField] float jumpStrength = 5f;
     [SerializeField] float climbSpeed;
     [SerializeField] bool isClimbing;
+    [SerializeField] bool isJumping;
 
     float counter;
 
@@ -52,18 +53,21 @@ public class PlayerMovment : MonoBehaviour
         isGrounded = Physics.Raycast(groundedCheck.position, Vector3.down, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = 0f;  
+            velocity.y = -2f;
         }
         else
         {
-            velocity.y += gravity * Time.deltaTime; 
+            velocity.y += gravity * Time.deltaTime;
         }
-        
+
         if (isClimbing && climbState == ClimbState.climbing)
         {
             Climbing();
         }
-
+        if (isJumping)
+        {
+            jump();
+        }
         Move();
         
         Stamina();
@@ -133,12 +137,16 @@ public class PlayerMovment : MonoBehaviour
         input = context.ReadValue<Vector2>();
         Move();
     }
-
+    private void jump()
+    {
+        velocity.y = Mathf.Sqrt(jumpStrength * -2f * gravity);
+        isJumping = false;
+    }
     public void DoJumping(InputAction.CallbackContext context)
     {
         if (context.performed && isGrounded&& climbState == ClimbState.jumping)
         {
-            velocity.y = Mathf.Sqrt(jumpStrength * -2f * gravity);
+            isJumping = true;
            // animator.SetBool("jumping", true);
         }
         else if (context.performed && isGrounded && climbState == ClimbState.climbing)
@@ -163,11 +171,15 @@ public class PlayerMovment : MonoBehaviour
         {
             animator.SetBool("climbing", false);
         }
+        if (!isClimbing && isGrounded)
+        {
+            climbState = ClimbState.jumping;
+        }
     }
 
     public void DoRunning(InputAction.CallbackContext context)
     {
-        if (context.performed && stamina > 0 && !tired&&isGrounded)
+        if (context.performed && stamina > 0 && !tired)
         {
             isSprinting = true;
             movementSpeed = sprintSpeed;
@@ -182,21 +194,22 @@ public class PlayerMovment : MonoBehaviour
 
     private void Move()
     {
+        Vector3 direction = new Vector3(input.x, 0, input.y).normalized; //hij berekent de richting die hij input 
 
-        Vector3 direction = new Vector3(input.x, 0, input.y).normalized;
         if (direction.magnitude >= 0.1f)
         {
-            // Draai het object naar de richting van de beweging
-            Quaternion toRotation = Quaternion.LookRotation(direction); // Rotatie naar de richting van de beweging
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime); // Zorg ervoor dat de rotatie niet te snel gaat
+            Quaternion toRotation = Quaternion.LookRotation(direction);  // hij gebruikt de richting  om richting de player te kijken
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime); //hij roteert de richting waar hij naaroe gaatw
 
-            // Beweging toepassen
             horizontalMovement = direction * movementSpeed;
-            Vector3 finalMovement = horizontalMovement + new Vector3(0, velocity.y, 0);
-            characterController.Move(finalMovement * Time.deltaTime);
         }
+        else
+        {
+            horizontalMovement = Vector3.zero; 
+        }
+        Vector3 finalMovement = horizontalMovement + new Vector3(0, velocity.y, 0);
+        characterController.Move(finalMovement * Time.deltaTime);
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("climbable"))

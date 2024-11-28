@@ -7,20 +7,23 @@ public class ObjectFader : MonoBehaviour
     [SerializeField] Material baseMaterial;
     [SerializeField] Material fadeMaterial;
 
+    enum MaterialState
+    {
+        normall,
+        shaders
+    }
+
 
     Renderer renderer;
 
-    [SerializeField] bool doFade;
-
-    // Start is called before the first frame update
     void Start()
     {
         renderer = GetComponent<Renderer>();
-        renderer.sharedMaterial = baseMaterial;
     }
     private void OnTriggerEnter(Collider other)
     {
-         renderer.material = new Material(fadeMaterial);       
+        renderer.material = new Material(fadeMaterial);
+
     }
     private void OnTriggerStay(Collider other)
     {
