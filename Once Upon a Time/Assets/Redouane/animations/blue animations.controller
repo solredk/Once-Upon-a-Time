@@ -172,7 +172,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: -8543730622077933690, guid: ea72194f77f61f945b04400610743077, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -199,7 +199,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -1620126194535567936, guid: e2b7cbcf0d6cefc42a031e408e3fc92d, type: 3}
+  m_Motion: {fileID: -8543730622077933690, guid: ea72194f77f61f945b04400610743077, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: jumping
@@ -211,7 +211,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerAnimation
+  m_Name: blue animations
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: speed
