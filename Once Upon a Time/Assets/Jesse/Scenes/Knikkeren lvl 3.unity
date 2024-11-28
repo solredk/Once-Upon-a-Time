@@ -320,6 +320,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &155721851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3886937142264914246, guid: 3738b074fb7d2c1449b39c0fccb04801, type: 3}
+  m_PrefabInstance: {fileID: 1283112720646328810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &228349405
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +650,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b4635cc19240904098d848065d3425b, type: 3}
+--- !u!4 &1258603196 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5326374621590369167, guid: 3738b074fb7d2c1449b39c0fccb04801, type: 3}
+  m_PrefabInstance: {fileID: 1283112720646328810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1286243880
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marblePrefab: {fileID: 6516019648782796371, guid: c891246842a35dd469078a2c4b6aa2d4, type: 3}
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 1258603196}
   numberOfPlayers: 4
   playerColors:
   - {r: 0.0082166195, g: 1, b: 0, a: 0}
@@ -998,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b36521f13aff243bb0e40ecfa13aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 0}
+  endPoint: {fileID: 155721851}
   gameManager: {fileID: 1438551697}
   playerKey: 
   closestDistance: 3.4028235e+38
