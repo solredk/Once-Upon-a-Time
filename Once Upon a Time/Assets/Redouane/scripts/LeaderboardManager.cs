@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
+using UnityEngine.SceneManagement;
 
 public class LeaderboardManager : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class LeaderboardManager : MonoBehaviour
     int lastgame;
     Dictionary<string,float> keyValuePairs = new Dictionary<string,float>();
     [SerializeField] TextMeshProUGUI scoreboardText;
+    private float counter;
+
+    private PointManager PointManager;
 
     void Start()
     {
@@ -20,7 +25,16 @@ public class LeaderboardManager : MonoBehaviour
             case 1:
                 Tag();
                 break;
+            case 2:
+                PointManager.Knikkeren();
+                break;
 
+        }
+
+        counter += Time.deltaTime;
+        if (counter >= 10)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 
