@@ -690,6 +690,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd89cf89dfe7e04f92d42c48037430a, type: 3}
+--- !u!1001 &174719376206120524
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 32.42925
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000008974978
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 28.060472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457307999920982187, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2266072896332911121, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
+      propertyPath: m_Name
+      value: glowing plant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 902ac162fd134f444ad4e760e72ec932, type: 3}
 --- !u!205 &880963431294297500
 LODGroup:
   m_ObjectHideFlags: 0
@@ -1768,3 +1825,4 @@ SceneRoots:
   - {fileID: 1562625842302334564}
   - {fileID: 2414554609379401587}
   - {fileID: 4954080008679168865}
+  - {fileID: 174719376206120524}
