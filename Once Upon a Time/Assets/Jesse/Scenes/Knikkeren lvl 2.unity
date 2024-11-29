@@ -904,7 +904,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -30.196884, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -949,13 +949,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   marblePrefab: {fileID: 6516019648782796371, guid: c891246842a35dd469078a2c4b6aa2d4, type: 3}
   spawnPoint: {fileID: 569865840}
-  numberOfPlayers: 2
+  numberOfPlayers: 4
   playerColors:
   - {r: 0.0082166195, g: 1, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0.92332065, b: 0, a: 0}
   - {r: 0, g: 0.20210934, b: 1, a: 0}
   chargeSlider: {fileID: 666351669}
+  currentPlayerText: {fileID: 1353437343}
   currentPlayerIndex: 0
   spawnedMarbles: []
   pointManager: {fileID: 1518327929}

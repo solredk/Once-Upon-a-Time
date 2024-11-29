@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,8 +14,9 @@ public class GameManagerKnikkeren : MonoBehaviour
     public Color[] playerColors;
 
     public Slider chargeSlider;
+    public TextMeshProUGUI currentPlayerText;
 
-    [HideInInspector] public int currentPlayerIndex = 0;
+    [HideInInspector] public int currentPlayerIndex;
     private GameObject currentMarble;
     private bool isWaitingForNextPlayer = false;
 
@@ -137,6 +139,8 @@ public class GameManagerKnikkeren : MonoBehaviour
         }
 
         Debug.Log($"Speler {currentPlayerIndex + 1} is nu aan de beurt!");
+        currentPlayerText.text = ($"Speler {currentPlayerIndex + 1} turns");
+        //currentPlayerText.color = playerColors[currentPlayerIndex];
 
         PlayerController controller = currentMarble.GetComponent<PlayerController>();
         controller.enabled = true;
