@@ -9,7 +9,7 @@ public class GameManagerKnikkeren : MonoBehaviour
 {
     public GameObject marblePrefab;
     public Transform spawnPoint;
-    public int numberOfPlayers = 4;
+    public int numberOfPlayers;
 
     public Color[] playerColors;
 
