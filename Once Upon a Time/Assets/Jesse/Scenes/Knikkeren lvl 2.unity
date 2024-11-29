@@ -1010,6 +1010,7 @@ MonoBehaviour:
   closestDistance: 3.4028235e+38
   closestPlayerIndex: -1
   closestMarble: {fileID: 0}
+  textMeshProUGUI: {fileID: 1752036122}
 --- !u!4 &1518327930
 Transform:
   m_ObjectHideFlags: 0

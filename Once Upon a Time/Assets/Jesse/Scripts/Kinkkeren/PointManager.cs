@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PointManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class PointManager : MonoBehaviour
     [HideInInspector] public float closestDistance = float.MaxValue;
     [HideInInspector] public int closestPlayerIndex = -1;
     [HideInInspector] public GameObject closestMarble = null;
+
+    public TextMeshProUGUI textMeshProUGUI;
 
     void Start()
     {
@@ -74,6 +77,7 @@ public class PointManager : MonoBehaviour
         playerScores[closestPlayerIndex] += 1;
 
         Debug.Log($"Speler {closestPlayerIndex + 1} krijgt een punt! Totaal: {playerScores[closestPlayerIndex]} punten.");
+        textMeshProUGUI.text = $"Speler {closestPlayerIndex + 1} gets a point!";
 
         playerKey = $"PlayerScore_{closestPlayerIndex + 1}";
         PlayerPrefs.SetInt(playerKey, playerScores[closestPlayerIndex]);
