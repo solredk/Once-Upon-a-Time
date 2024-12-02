@@ -15,7 +15,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
-    motionNodeName: 
+    motionNodeName: <Root Transform>
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -149,8 +149,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: walk cycle char 2
-      takeName: Armature.008|Armature.005Action
+      name: Armature.008|3.3Action.001 (1)
+      takeName: Armature.008|3.3Action.001
       internalID: -8543730622077933690
       firstFrame: 0
       lastFrame: 219

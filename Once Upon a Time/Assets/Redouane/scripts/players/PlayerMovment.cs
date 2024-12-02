@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovment : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     [SerializeField] ClimbState climbState;
 
+    
     [SerializeField] Animator animator;
 
     Vector2 input;
@@ -26,6 +28,8 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] bool isGrounded;
     [SerializeField] float staminaSpeed;
     [SerializeField] float rotationSpeed = 3;
+    [SerializeField] float offset;
+
 
     [Header("sprinting")]
     [SerializeField] float sprintSpeed = 10f;
@@ -39,6 +43,7 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] bool isClimbing;
     [SerializeField] bool isJumping;
 
+    float speedvalue;
     float counter;
 
     private enum ClimbState
@@ -71,6 +76,7 @@ public class PlayerMovment : MonoBehaviour
         Move();
         
         Stamina();
+
     }
 
     private void Stamina()
@@ -198,7 +204,7 @@ public class PlayerMovment : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
-            Quaternion toRotation = Quaternion.LookRotation(direction);  // hij gebruikt de richting  om richting de player te kijken
+            Quaternion toRotation = Quaternion.LookRotation(direction) * Quaternion.Euler(0, offset, 0);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime); //hij roteert de richting waar hij naaroe gaatw
 
             horizontalMovement = direction * movementSpeed;
