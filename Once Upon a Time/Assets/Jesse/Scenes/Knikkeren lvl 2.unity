@@ -904,7 +904,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -30.196884, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -956,6 +956,7 @@ MonoBehaviour:
   - {r: 1, g: 0.92332065, b: 0, a: 0}
   - {r: 0, g: 0.20210934, b: 1, a: 0}
   chargeSlider: {fileID: 666351669}
+  currentPlayerText: {fileID: 1353437343}
   currentPlayerIndex: 0
   spawnedMarbles: []
   pointManager: {fileID: 1518327929}
@@ -1009,6 +1010,7 @@ MonoBehaviour:
   closestDistance: 3.4028235e+38
   closestPlayerIndex: -1
   closestMarble: {fileID: 0}
+  textMeshProUGUI: {fileID: 1752036122}
 --- !u!4 &1518327930
 Transform:
   m_ObjectHideFlags: 0

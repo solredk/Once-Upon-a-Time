@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,13 +9,14 @@ public class GameManagerKnikkeren : MonoBehaviour
 {
     public GameObject marblePrefab;
     public Transform spawnPoint;
-    public int numberOfPlayers = 4;
+    public int numberOfPlayers;
 
     public Color[] playerColors;
 
     public Slider chargeSlider;
+    public TextMeshProUGUI currentPlayerText;
 
-    [HideInInspector] public int currentPlayerIndex = 0;
+    [HideInInspector] public int currentPlayerIndex;
     private GameObject currentMarble;
     private bool isWaitingForNextPlayer = false;
 
@@ -109,21 +111,7 @@ public class GameManagerKnikkeren : MonoBehaviour
             Debug.Log("Het spel is voorbij! Alle spelers hebben geschoten.");
             pointManager.DetermineClosestMarble();
 
-            currentScene = SceneManager.GetActiveScene();
-
-            sceneName = currentScene.name;
-            sceneIndex = currentScene.buildIndex;
-
-            if (sceneName == "Knikkeren lvl 1")
-            {
-                SceneManager.LoadScene("Knikkeren lvl 2");
-            }
-
-            if (sceneName == "Knikkeren lvl 2")
-            {
-                SceneManager.LoadScene("Knikkeren lvl 3");
-            }
-
+            StartCoroutine(SceneSwitch(2f));
             return;
         }
 
@@ -137,6 +125,8 @@ public class GameManagerKnikkeren : MonoBehaviour
         }
 
         Debug.Log($"Speler {currentPlayerIndex + 1} is nu aan de beurt!");
+        currentPlayerText.text = ($"Speler {currentPlayerIndex + 1} turn");
+        //currentPlayerText.color = playerColors[currentPlayerIndex];
 
         PlayerController controller = currentMarble.GetComponent<PlayerController>();
         controller.enabled = true;
@@ -169,5 +159,24 @@ public class GameManagerKnikkeren : MonoBehaviour
 
         currentPlayerIndex++;
         SpawnMarbleForPlayer();
+    }
+
+    private IEnumerator SceneSwitch(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        currentScene = SceneManager.GetActiveScene();
+
+        sceneName = currentScene.name;
+        sceneIndex = currentScene.buildIndex;
+
+        if (sceneName == "Knikkeren lvl 1")
+        {
+            SceneManager.LoadScene("Knikkeren lvl 2");
+        }
+
+        if (sceneName == "Knikkeren lvl 2")
+        {
+            SceneManager.LoadScene("Knikkeren lvl 3");
+        }
     }
 }
