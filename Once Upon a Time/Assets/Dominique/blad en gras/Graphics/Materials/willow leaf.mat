@@ -10,7 +10,7 @@ Material:
   m_Name: willow leaf
   m_Shader: {fileID: 4800000, guid: 8bb76156a4f696249ac78cae0f1a0ade, type: 3}
   m_Parent: {fileID: 2100000, guid: 67e642841af2acc4492399d0ff294789, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_ModifiedSerializedProperties: 8
   m_ValidKeywords:
   - _WIGGLE_ON
   - _WIND_ON
@@ -35,7 +35,9 @@ Material:
     - _Cull: 2
     - _Float1: 9.3
     - _Strenght: 0.5
+    - _Wiggle: 1
     - _WiggleStrenght: 0.99
+    - _Wind: 1
     - _WindQuality: 0
     - _WindStrenght: 0
     m_Colors:

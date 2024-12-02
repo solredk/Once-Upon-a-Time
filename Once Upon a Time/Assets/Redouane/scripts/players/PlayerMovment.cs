@@ -132,9 +132,9 @@ public class PlayerMovment : MonoBehaviour
         {
             animator.SetFloat("speed", 0);
         }
-        if (isGrounded)
+        if (isJumping)
         {
-           // animator.SetBool("jumping", false);
+            animator.SetTrigger("Jump");
         }
     }
 
@@ -153,7 +153,7 @@ public class PlayerMovment : MonoBehaviour
         if (context.performed && isGrounded&& climbState == ClimbState.jumping)
         {
             isJumping = true;
-           // animator.SetBool("jumping", true);
+            // animator.SetBool("jumping", true);
         }
         else if (context.performed && isGrounded && climbState == ClimbState.climbing)
         {

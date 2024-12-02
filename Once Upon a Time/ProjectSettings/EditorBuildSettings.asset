@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/scene/Homescreen.unity
     guid: 7a14335492529a84798969da634531a6
   - enabled: 1
+    path: Assets/scene/lobby.unity
+    guid: 1dbe56357f35d2747b42461035da25cb
+  - enabled: 1
     path: Assets/scene/Tag.unity
-    guid: 3fac5df5c8dd58c41985e56b25f75531
+    guid: a9aa7acc9f78b0845a597b825e9e8472
   - enabled: 1
     path: Assets/scene/leaderboard.unity
     guid: 59f9e3cb711ae3b4eb64256b3c1e81d0
