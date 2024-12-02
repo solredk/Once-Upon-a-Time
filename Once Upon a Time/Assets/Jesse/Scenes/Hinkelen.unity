@@ -671,6 +671,18 @@ MonoBehaviour:
   - {fileID: 960935083}
   - {fileID: 21152126}
   - {fileID: 865694790}
+  keyImagesPerPlayer:
+  - keyImages:
+    - {fileID: 1317255330}
+    - {fileID: 1267825282}
+    - {fileID: 207833134}
+    - {fileID: 1729354380}
+    - {fileID: 947371040}
+    - {fileID: 178392490}
+    - {fileID: 906976628}
+    - {fileID: 37954663}
+    - {fileID: 691797593}
+    - {fileID: 734592612}
   speed: 5
 --- !u!1 &691797591
 GameObject:
@@ -1997,7 +2009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b58ca7a3342f974bb06c05e0fe71898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndex: 1
+  playerIndex: 0
   playerTransform: {fileID: 1989299718}
 --- !u!1001 &3481434708212654724
 PrefabInstance:
