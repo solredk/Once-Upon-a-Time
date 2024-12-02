@@ -56,8 +56,16 @@ public class Tag : MonoBehaviour
     {
         if (state == PlayerState.verstopper)
         {
+            if (TagGameManager.Instance != null)
+            {
+                Tag currentTagger = TagGameManager.instance.currentTagger;
+                if (currentTagger != null && currentTagger != this)
+                {
+                    currentTagger.State = PlayerState.verstopper; 
+                }
+            }
             state = PlayerState.tikker;
-            Debug.Log(this.gameObject);
+            TagGameManager.instance.currentTagger = this; 
             tagged = false;
         }
     }

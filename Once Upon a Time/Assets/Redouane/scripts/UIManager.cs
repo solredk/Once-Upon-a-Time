@@ -51,6 +51,14 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("Homescreen");
     }
+    public  void GoToLobby()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
     public void GoToTag()
     {

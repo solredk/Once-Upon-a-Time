@@ -12,17 +12,15 @@ public class StaminaDisplay : MonoBehaviour
 
     private void Start()
     {
-        // Zoek de hoofdcamera
-
         mainCamera = Camera.main;
+    }
+    private void Update()
+    {
+        transform.position = transform.parent.position + Vector3.up * 2f;         
     }
 
     private void LateUpdate()
     {
-
-        transform.position = transform.parent.position + Vector3.up * 2f; 
-        
-        // Laat het object altijd naar de camera wijzen
         transform.rotation = Quaternion.LookRotation(transform.position - mainCamera.transform.position);
         if (PlayerMovment.tired)
         {

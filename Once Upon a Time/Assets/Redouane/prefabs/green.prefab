@@ -277,8 +277,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4278255380
+  m_fontColor: {r: 0.080085754, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1385,7 +1385,7 @@ GameObject:
   - component: {fileID: 2794614656002554966}
   - component: {fileID: 7601631759453229437}
   m_Layer: 0
-  m_Name: red
+  m_Name: green
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1612,7 +1612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9745954e96bcb340b37a219c6676cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  username: red
+  username: green
   state: 1
   closestPlayer: {fileID: 0}
   inTagRadius: 0
@@ -1718,7 +1718,7 @@ Animator:
   m_GameObject: {fileID: 6199284711780030613}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3b261c4fec9d7a24a8c75022304dd4b4, type: 2}
+  m_Controller: {fileID: 9100000, guid: da02e7233ecc4db4b847274686301c5d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
