@@ -21,6 +21,7 @@ public class PlayerMovment : MonoBehaviour
     Vector3 velocity;
     Vector3 horizontalMovement;
 
+
     [Header("movement")]
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float groundDistance = 0.7f;    
@@ -52,7 +53,10 @@ public class PlayerMovment : MonoBehaviour
         climbing
 
     }
+    private void Start()
+    {
 
+    }
     private void Update()
     {
         isGrounded = Physics.Raycast(groundedCheck.position, Vector3.down, groundDistance, groundMask);

@@ -833,6 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   username: white
+  uIManager: {fileID: 0}
   state: 0
   closestPlayer: {fileID: 0}
   inTagRadius: 0
@@ -854,7 +855,7 @@ MonoBehaviour:
   groundedCheck: {fileID: 6935989380552570861}
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   climbState: 0
   animator: {fileID: 7307839101117579593}
   movementSpeed: 20
@@ -962,7 +963,19 @@ MonoBehaviour:
     m_ActionId: 8e8a4a03-c876-42c6-a604-9521f89838af
     m_ActionName: tikkertje/taggen[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 416605739409185860}
+        m_TargetAssemblyTypeName: Tag, Assembly-CSharp
+        m_MethodName: Dopauze
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8587890b-405c-4b2c-821d-8992519041aa
     m_ActionName: tikkertje/pauze[/Keyboard/escape]
   - m_PersistentCalls:
