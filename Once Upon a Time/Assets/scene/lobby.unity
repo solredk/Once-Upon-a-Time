@@ -12876,7 +12876,8 @@ PrefabInstance:
       value: mushroomportaal (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 899440065934580249, guid: aee77cd1ecc4e754c80eda1c6adb9fd5, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2356124716589053220, guid: aee77cd1ecc4e754c80eda1c6adb9fd5, type: 3}
       insertIndex: -1
@@ -16372,7 +16373,8 @@ PrefabInstance:
       value: mushroomportaal (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 899440065934580249, guid: aee77cd1ecc4e754c80eda1c6adb9fd5, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2356124716589053220, guid: aee77cd1ecc4e754c80eda1c6adb9fd5, type: 3}
       insertIndex: -1
