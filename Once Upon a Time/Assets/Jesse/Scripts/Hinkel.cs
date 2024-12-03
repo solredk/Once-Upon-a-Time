@@ -10,8 +10,8 @@ public class Hinkel : MonoBehaviour
 {
     [SerializeField] private List<NieuweHinkel> Nieuwehinkel;
 
-    public float randomTime1;
-    public float randomTime2;
+    [HideInInspector] public float randomTime1;
+    [HideInInspector] public float randomTime2;
 
     void Start()
     {

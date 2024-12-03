@@ -24,16 +24,6 @@ public class NieuweHinkel : MonoBehaviour
         hinkel = FindAnyObjectByType<Hinkel>();
 
         ResetImages();
-
-        keyMapping1 = new Dictionary<KeyCode, Image>
-        {
-            { KeyCode.Q, keyImages[0] },
-            { KeyCode.W, keyImages[1] },
-            { KeyCode.E, keyImages[2] },
-            { KeyCode.R, keyImages[3] },
-            { KeyCode.T, keyImages[4] },
-            { KeyCode.Y, keyImages[5] }
-        };
     }
 
         public void StartMove()
@@ -143,7 +133,11 @@ public class NieuweHinkel : MonoBehaviour
     {
         for (int i = 0; i < keyImages.Count; i++)
         {
-            keyImages[i].enabled = false;
+            for(int j = 0;j < keyImages.Count; j++)
+            {
+                keyImages[i].enabled = false;
+                keyImages[j].enabled = false;
+            }
         }
     }
 }
