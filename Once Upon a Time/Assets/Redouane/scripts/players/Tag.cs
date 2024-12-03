@@ -15,18 +15,30 @@ public class Tag : MonoBehaviour
     }
     public string username;
 
+    [Header("UI")]
+    [SerializeField] UIManager uIManager;
+
+
+
     [SerializeField] PlayerState state;
     public PlayerState State { get { return state; } set { state = value; } }
     [SerializeField] GameObject closestPlayer;
     
     [SerializeField] bool inTagRadius;
+    bool IsPaused;
 
     [SerializeField]float SurviveTime;
     [SerializeField] bool tagged;
     float counter;
 
+    private void Start()
+    {
+        uIManager = GameObject.FindGameObjectWithTag("Managers").GetComponent<UIManager>();
+    }
+
     private void Update()
     {
+
         if (state == PlayerState.verstopper && HasPlayerInTikkerState())
         {
             SurviveTime += Time.deltaTime;
@@ -99,5 +111,9 @@ public class Tag : MonoBehaviour
     public float ReturnSurviveTime()
     {
         return SurviveTime;
+    }
+    public void Dopauze(InputAction.CallbackContext context)
+    {
+        uIManager.DoPauze();
     }
 }

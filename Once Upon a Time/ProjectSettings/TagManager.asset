@@ -16,6 +16,9 @@ TagManager:
   - Spawnpoint
   - Barrier
   - Knikker
+  - Pauze
+  - Resume
+  - Managers
   layers:
   - Default
   - TransparentFX

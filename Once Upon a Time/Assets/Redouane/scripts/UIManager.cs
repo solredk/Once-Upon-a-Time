@@ -40,10 +40,6 @@ public class UIManager : MonoBehaviour
                 EventSystem.SetSelectedGameObject(buttons[index]);
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            DoPauze();
-        }
     }
 
 
@@ -79,7 +75,7 @@ public class UIManager : MonoBehaviour
     {
         if (PauzeMenus.Count >= 1)
         {
-            if (!IsPaused)// hiermee kan je de game pauzeren
+            if (!IsPaused)
             {
                 IsPaused = true;
                 Time.timeScale = 0f;
