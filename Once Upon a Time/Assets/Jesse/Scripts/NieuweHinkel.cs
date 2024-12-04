@@ -15,7 +15,9 @@ public class NieuweHinkel : MonoBehaviour
     private List<Image> randomImage1;
     private List<Image> randomImage2;
 
-    public Dictionary<KeyCode, Image> keyMapping1;
+    private HashSet<int> pressedKeys = new HashSet<int>();
+    private float keyPressTimeout = 1.0f;
+    private float lastKeyPressTime = 0f;
 
     public float speed;
 
@@ -75,10 +77,11 @@ public class NieuweHinkel : MonoBehaviour
 
     public IEnumerator ShowImage1()
     {
+        Debug.Log("Spawning 1 Image");
         yield return new WaitForSeconds(hinkel.randomTime1);
         randomImage1 = GetRandomImages(keyImages, 1);
         randomImage1[0].enabled = true;
-
+        Debug.Log("Spawning 1 Image done");
         while (randomImage1[0].enabled)
         {
             CheckKeyPress1();
@@ -88,10 +91,12 @@ public class NieuweHinkel : MonoBehaviour
 
     public IEnumerator ShowImage2()
     {
+        Debug.Log("Spawning 2 Images");
         yield return new WaitForSeconds(hinkel.randomTime2);
         randomImage2 = GetRandomImages(keyImages, 2);
         randomImage2[0].enabled = true;
         randomImage2[1].enabled = true;
+        Debug.Log("Spawning 2 Images done");
 
         while (randomImage2[0].enabled && randomImage2[1].enabled)
         {
@@ -102,7 +107,6 @@ public class NieuweHinkel : MonoBehaviour
 
     private void CheckKeyPress1()
     {
-        Debug.Log("CheckingkeyPress1");
         for (int i = 0; i < keyImages.Count; i++)
         {
             if (Input.GetKeyDown(keysCodes[i]) && keyImages[i].enabled)
@@ -118,15 +122,24 @@ public class NieuweHinkel : MonoBehaviour
     {
         for (int i = 0; i < keyImages.Count; i++)
         {
-            for (int j = 0; j < keyImages.Count; j++)
+            if (Input.GetKeyDown(keysCodes[i]) && keyImages[i].enabled)
             {
-                if (Input.GetKeyDown(keysCodes[i]) && keyImages[i].enabled && Input.GetKeyDown(keysCodes[j]) && keyImages[j].enabled)
-                {
-                    ResetImages();
-                    MoveToNextLocation();
-                    break;
-                }
+                pressedKeys.Add(i);
+                lastKeyPressTime = Time.time;
             }
+        }
+
+        if (Time.time - lastKeyPressTime > keyPressTimeout)
+        {
+            pressedKeys.Clear();
+        }
+
+
+        if (pressedKeys.Count == 2)
+        {
+            ResetImages();
+            MoveToNextLocation();
+            pressedKeys.Clear();
         }
     }
     void ResetImages()

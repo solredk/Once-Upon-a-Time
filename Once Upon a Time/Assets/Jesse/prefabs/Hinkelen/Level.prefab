@@ -1617,11 +1617,11 @@ GameObject:
   - component: {fileID: 3583678070978240229}
   - component: {fileID: 3383169736046853515}
   - component: {fileID: 6086949910827579437}
-  - component: {fileID: 8841382346361980277}
+  - component: {fileID: 7516025666102082308}
   - component: {fileID: 6266746285406426664}
   - component: {fileID: 7550371145307890509}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1692,7 +1692,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8841382346361980277
+--- !u!114 &7516025666102082308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1701,11 +1701,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 4016754913843158250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b58ca7a3342f974bb06c05e0fe71898, type: 3}
+  m_Script: {fileID: 11500000, guid: 150cff1d35bc28a40a25b413b48330d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndex: 1
-  playerTransform: {fileID: 3583678070978240229}
+  playerPos: {fileID: 3583678070978240229}
+  nextLocations:
+  - {fileID: 6237501190693721919}
+  - {fileID: 8002111660125916441}
+  - {fileID: 933757876628763285}
+  - {fileID: 1868282770687056506}
+  - {fileID: 9054613890841931161}
+  - {fileID: 5102996363506372289}
+  - {fileID: 3661508387330102439}
+  - {fileID: 6203999026789279734}
+  - {fileID: 976723707690010649}
+  - {fileID: 7437163350748352598}
+  - {fileID: 8313382347296347503}
+  - {fileID: 5716539379764719535}
+  - {fileID: 6209426388848035867}
+  - {fileID: 5107275555280339289}
+  - {fileID: 1527176235548842695}
+  keyImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  keysCodes: 710000007700000065000000610000007300000064000000
+  speed: 5
 --- !u!136 &6266746285406426664
 CapsuleCollider:
   m_ObjectHideFlags: 0
