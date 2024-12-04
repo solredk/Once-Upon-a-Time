@@ -340,6 +340,17 @@
                 },
                 {
                     "name": "",
+                    "id": "390c024e-da80-47fc-bd31-15571f8d871f",
+                    "path": "<Mouse>/backButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "taggen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9d538ff4-1747-4fec-a1f0-8572bea9b4d4",
                     "path": "<Keyboard>/space",
                     "interactions": "",

@@ -1141,6 +1141,8 @@ GameObject:
   - component: {fileID: 6441949132965929188}
   - component: {fileID: 8671638562129412221}
   - component: {fileID: 4653435012529087419}
+  - component: {fileID: 3290109328958641554}
+  - component: {fileID: 7365418946357174725}
   m_Layer: 0
   m_Name: yellow
   m_TagString: Player
@@ -1239,6 +1241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   username: yellow
+  uIManager: {fileID: 0}
   state: 1
   closestPlayer: {fileID: 0}
   inTagRadius: 0
@@ -1366,6 +1369,48 @@ MonoBehaviour:
   m_DefaultActionMap: tikkertje
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!65 &3290109328958641554
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385485205926975898}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4.373217, z: 1.813591}
+  m_Center: {x: 0, y: 0.13363671, z: 0.12421799}
+--- !u!65 &7365418946357174725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385485205926975898}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 5, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5950090356919081648
 GameObject:
   m_ObjectHideFlags: 0
