@@ -14,11 +14,11 @@ public class LobbyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerInputManager.playerPrefab = Players[playerInputManager.playerCount];
         if (playerInputManager != null)
         {
             playerInputManager = GetComponent<PlayerInputManager>();
         }
-
     }
 
     // Update is called once per frame
