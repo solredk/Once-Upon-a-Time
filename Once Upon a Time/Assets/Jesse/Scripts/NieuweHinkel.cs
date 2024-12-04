@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NieuweHinkel : MonoBehaviour
@@ -60,6 +61,7 @@ public class NieuweHinkel : MonoBehaviour
         if (other.gameObject.CompareTag("Finish"))
         {
             Debug.Log("Won!");
+            SceneManager.LoadScene("lobby");
         }
     }
 
@@ -77,11 +79,18 @@ public class NieuweHinkel : MonoBehaviour
 
     public IEnumerator ShowImage1()
     {
-        Debug.Log("Spawning 1 Image");
+        Debug.Log("Spawning 1 Image...");
+
         yield return new WaitForSeconds(hinkel.randomTime1);
+
         randomImage1 = GetRandomImages(keyImages, 1);
+
+        yield return new WaitForSeconds(0.1f);
+
         randomImage1[0].enabled = true;
-        Debug.Log("Spawning 1 Image done");
+
+        Debug.Log("Spawning 1 Image done....");
+
         while (randomImage1[0].enabled)
         {
             CheckKeyPress1();
@@ -91,12 +100,27 @@ public class NieuweHinkel : MonoBehaviour
 
     public IEnumerator ShowImage2()
     {
-        Debug.Log("Spawning 2 Images");
+        Debug.Log("Spawning 2 Images....");
+
         yield return new WaitForSeconds(hinkel.randomTime2);
+
         randomImage2 = GetRandomImages(keyImages, 2);
-        randomImage2[0].enabled = true;
-        randomImage2[1].enabled = true;
-        Debug.Log("Spawning 2 Images done");
+
+        if (randomImage2 == null || randomImage2.Count < 2)
+        {
+            Debug.LogError("Error: GetRandomImages returned less than 2 images.");
+            yield break;
+        }
+
+        yield return new WaitForSeconds(0.1f);
+
+        if (randomImage2.Count == 2) 
+        {  
+            randomImage2[0].enabled = true;
+            randomImage2[1].enabled = true;
+        }
+
+        Debug.Log("Spawning 2 Images done.....");
 
         while (randomImage2[0].enabled && randomImage2[1].enabled)
         {
