@@ -173,9 +173,14 @@ public class GameManagerKnikkeren : MonoBehaviour
             SceneManager.LoadScene("Knikkeren lvl 2 Kim");
         }
 
-        if (sceneName == "Knikkeren lvl 2")
+        if (sceneName == "Knikkeren lvl 2 Kim")
         {
             SceneManager.LoadScene("Knikkeren lvl 3 Kim");
+        }
+           
+        if(sceneName == "Knikkeren lvl 3 Kim")
+        {
+            SceneManager.LoadScene("lobby");
         }
     }
 }
