@@ -14185,6 +14185,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1518729225
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17641306
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.17641306
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17641306
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.828
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.526
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392454084210129325, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_Name
+      value: lantern butterfly met licht (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361456261249811872, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_Range
+      value: 37.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361456261249811872, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_Intensity
+      value: 1.2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
 --- !u!1001 &1526801273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16234,7 +16311,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.01
+      value: 13.9
       objectReference: {fileID: 0}
     - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16242,7 +16319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.72
+      value: -19.16
       objectReference: {fileID: 0}
     - target: {fileID: 2645340620294953939, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16275,6 +16352,14 @@ PrefabInstance:
     - target: {fileID: 4392454084210129325, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
       propertyPath: m_Name
       value: lantern butterfly met licht (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361456261249811872, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_Range
+      value: 37.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361456261249811872, guid: 328d135509c531f4a854cfbe87e7b4d1, type: 3}
+      propertyPath: m_Intensity
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20208,3 +20293,4 @@ SceneRoots:
   - {fileID: 423401996}
   - {fileID: 311148506}
   - {fileID: 1804483340}
+  - {fileID: 1518729225}
