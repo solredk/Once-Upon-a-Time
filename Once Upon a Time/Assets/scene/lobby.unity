@@ -727,6 +727,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIndex: 0
+--- !u!1 &87739653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8401322039702766411, guid: 8d7a4c898f6000940a1b5d5150b08a43, type: 3}
+  m_PrefabInstance: {fileID: 2001849002}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &87739655
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87739653}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4.4491076
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &101288006
 GameObject:
   m_ObjectHideFlags: 0
@@ -13524,7 +13550,7 @@ MonoBehaviour:
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 3775073232682061342, guid: 4d87cfeb70d805141b58b891aa73def8, type: 3}
+  m_PlayerPrefab: {fileID: 0}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -13565,6 +13591,8 @@ MonoBehaviour:
   playerCount: {fileID: 1648759030}
   Players:
   - {fileID: 2610144355882597750, guid: 1329a956fb959994a860a66015a6f421, type: 3}
+  - {fileID: 3775073232682061342, guid: 4d87cfeb70d805141b58b891aa73def8, type: 3}
+  - {fileID: 7116312695840582822, guid: a138a432127b2ac44a82eed2795322a1, type: 3}
   currentPlayers: []
 --- !u!1001 &1563341663
 PrefabInstance:
@@ -16723,7 +16751,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8401322039702766411, guid: 8d7a4c898f6000940a1b5d5150b08a43, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 87739655}
   m_SourcePrefab: {fileID: 100100000, guid: 8d7a4c898f6000940a1b5d5150b08a43, type: 3}
 --- !u!1 &2001907810
 GameObject:
