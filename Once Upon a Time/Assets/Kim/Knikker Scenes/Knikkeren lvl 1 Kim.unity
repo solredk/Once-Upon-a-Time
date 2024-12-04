@@ -4570,7 +4570,7 @@ MonoBehaviour:
   - {r: 1, g: 0.92332065, b: 0, a: 0}
   - {r: 0, g: 0.20210934, b: 1, a: 0}
   chargeSlider: {fileID: 666351669}
-  currentPlayerText: {fileID: 0}
+  currentPlayerText: {fileID: 1353437343}
   currentPlayerIndex: 0
   spawnedMarbles: []
   pointManager: {fileID: 1518327929}
@@ -5010,7 +5010,7 @@ MonoBehaviour:
   closestDistance: 3.4028235e+38
   closestPlayerIndex: -1
   closestMarble: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
+  textMeshProUGUI: {fileID: 1752036122}
 --- !u!4 &1518327930
 Transform:
   m_ObjectHideFlags: 0

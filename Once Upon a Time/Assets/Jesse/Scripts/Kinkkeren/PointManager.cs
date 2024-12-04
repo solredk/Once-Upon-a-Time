@@ -47,7 +47,7 @@ public class PointManager : MonoBehaviour
 
         if (closestPlayerIndex != -1)
         {
-            Knikkeren();
+            StartCoroutine(Knikkeren());
         }
 
         RemoveAllMarbles();
@@ -72,12 +72,14 @@ public class PointManager : MonoBehaviour
         gameManager.SpawnMarbleForPlayer();
     }
 
-    public void Knikkeren()
+    public IEnumerator Knikkeren()
     {
         playerScores[closestPlayerIndex] += 1;
 
         Debug.Log($"Speler {closestPlayerIndex + 1} krijgt een punt! Totaal: {playerScores[closestPlayerIndex]} punten.");
         textMeshProUGUI.text = $"Speler {closestPlayerIndex + 1} gets a point!";
+        yield return new WaitForSeconds(2f);
+        textMeshProUGUI.text = "";
 
         playerKey = $"PlayerScore_{closestPlayerIndex + 1}";
         PlayerPrefs.SetInt(playerKey, playerScores[closestPlayerIndex]);
