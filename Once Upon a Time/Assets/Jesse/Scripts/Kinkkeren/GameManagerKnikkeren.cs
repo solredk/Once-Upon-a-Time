@@ -111,7 +111,7 @@ public class GameManagerKnikkeren : MonoBehaviour
             Debug.Log("Het spel is voorbij! Alle spelers hebben geschoten.");
             pointManager.DetermineClosestMarble();
 
-            StartCoroutine(SceneSwitch(2f));
+            StartCoroutine(SceneSwitch(1.3f));
             return;
         }
 
@@ -126,7 +126,6 @@ public class GameManagerKnikkeren : MonoBehaviour
 
         Debug.Log($"Speler {currentPlayerIndex + 1} is nu aan de beurt!");
         currentPlayerText.text = ($"Speler {currentPlayerIndex + 1} turn");
-        //currentPlayerText.color = playerColors[currentPlayerIndex];
 
         PlayerController controller = currentMarble.GetComponent<PlayerController>();
         controller.enabled = true;
@@ -169,14 +168,14 @@ public class GameManagerKnikkeren : MonoBehaviour
         sceneName = currentScene.name;
         sceneIndex = currentScene.buildIndex;
 
-        if (sceneName == "Knikkeren lvl 1")
+        if (sceneName == "Knikkeren lvl 1 Kim")
         {
-            SceneManager.LoadScene("Knikkeren lvl 2");
+            SceneManager.LoadScene("Knikkeren lvl 2 Kim");
         }
 
         if (sceneName == "Knikkeren lvl 2")
         {
-            SceneManager.LoadScene("Knikkeren lvl 3");
+            SceneManager.LoadScene("Knikkeren lvl 3 Kim");
         }
     }
 }

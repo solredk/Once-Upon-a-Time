@@ -21,12 +21,12 @@ EditorBuildSettings:
     path: Assets/scene/Hinkelen.unity
     guid: e30cde5fa2506ec4186c341bc58ea986
   - enabled: 1
-    path: Assets/Jesse/Scenes/Knikkeren lvl 1.unity
-    guid: f318214409f15f44b8a6f395170b76dd
+    path: Assets/Kim/Knikker Scenes/Knikkeren lvl 1 Kim.unity
+    guid: a03bfaa1953a7214697ae8636310c6cd
   - enabled: 1
-    path: Assets/Jesse/Scenes/Knikkeren lvl 2.unity
-    guid: ed9f986ed54523346a0640e5e2ded0c3
+    path: Assets/Kim/Knikker Scenes/Knikkeren lvl 2 Kim.unity
+    guid: b48ee36c38be28f479511d4a089f6788
   - enabled: 1
-    path: Assets/Jesse/Scenes/Knikkeren lvl 3.unity
-    guid: 6367c7a6d67715c47b96b71420e15d21
+    path: Assets/Kim/Knikker Scenes/Knikkeren lvl 3 Kim.unity
+    guid: fa6eec6dd1899b5478e0ff4447a3e93d
   m_configObjects: {}
