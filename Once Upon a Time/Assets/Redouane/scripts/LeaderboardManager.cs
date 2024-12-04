@@ -48,7 +48,7 @@ public class LeaderboardManager : MonoBehaviour
         scoreboardText.text = "";
         foreach (KeyValuePair<string, float> entry in keyValuePairs)
         {
-            scoreboardText.text += entry.Key + ": " + entry.Value.ToString("N2") + "seconden" + "\n";
+            scoreboardText.text += entry.Key + ": " + entry.Value.ToString("N0") + "seconden" + "\n";
         }
 
     }

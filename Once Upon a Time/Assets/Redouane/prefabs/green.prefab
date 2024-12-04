@@ -1613,6 +1613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   username: green
+  uIManager: {fileID: 0}
   state: 1
   closestPlayer: {fileID: 0}
   inTagRadius: 0
@@ -1637,7 +1638,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 4.3084145, z: 5}
+  m_Size: {x: 10, y: 4.3084145, z: 10}
   m_Center: {x: 0, y: 0.15420747, z: 0}
 --- !u!1 &6092258536481238319
 GameObject:

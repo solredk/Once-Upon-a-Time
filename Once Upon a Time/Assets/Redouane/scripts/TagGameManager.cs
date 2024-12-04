@@ -8,12 +8,14 @@ using UnityEngine.InputSystem;
 
 public class TagGameManager : GameManager
 {
+
     bool taggerChosen=false;
 
     public static TagGameManager instance;
 
     Tag tagScript;
 
+    [SerializeField]GameObject countdownImage;
      public  Tag currentTagger;
     private void Awake()
     {
@@ -33,11 +35,13 @@ public class TagGameManager : GameManager
         {
             textMeshProUGUI[0].text = playerInputManager.playerCount + "/4 players game starting in :";
             textMeshProUGUI[1].text = counter.ToString("N0");
+            countdownImage.SetActive(true);
             counter -= Time.deltaTime;
             if (counter <= 0)
             {
                 textMeshProUGUI[0].text = "";
                 textMeshProUGUI[1].text = "";
+                countdownImage.SetActive(false);
                 state = GameState.StartGame;
                 playerInputManager.DisableJoining();
 

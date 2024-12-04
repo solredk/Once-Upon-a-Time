@@ -64,6 +64,7 @@ public class Tag : MonoBehaviour
         Tag[] players = FindObjectsOfType<Tag>();
         return players.Any(p => p.state == PlayerState.tikker);
     }
+    
     public void Getaged()
     {
         if (state == PlayerState.verstopper)
@@ -83,7 +84,7 @@ public class Tag : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")&&other.gameObject != gameObject)
         {
             inTagRadius = true;
             closestPlayer = other.gameObject;
@@ -98,13 +99,10 @@ public class Tag : MonoBehaviour
     }
     public void DoTaggen(InputAction.CallbackContext context)
     {
-        if (state == PlayerState.tikker && inTagRadius)
+        if (state == PlayerState.tikker && inTagRadius && closestPlayer != null)
         {
             state = PlayerState.invincible;
-            if (closestPlayer != null && closestPlayer != this.gameObject)
-            {
-                closestPlayer.GetComponent<Tag>().tagged = true;
-            }
+            closestPlayer.GetComponent<Tag>().tagged = true;
         }
     }
 
