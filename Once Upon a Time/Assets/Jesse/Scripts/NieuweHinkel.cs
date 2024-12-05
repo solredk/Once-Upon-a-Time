@@ -144,12 +144,20 @@ public class NieuweHinkel : MonoBehaviour
 
     private void CheckKeyPress2()
     {
+        if (keyImages.Count < 2 || keysCodes.Count < 2)
+            return;
+
         for (int i = 0; i < keyImages.Count; i++)
         {
             if (Input.GetKeyDown(keysCodes[i]) && keyImages[i].enabled)
             {
                 pressedKeys.Add(i);
                 lastKeyPressTime = Time.time;
+
+                if (pressedKeys.Count > 2)
+                {
+                    pressedKeys.Clear();
+                }
             }
         }
 
@@ -158,9 +166,16 @@ public class NieuweHinkel : MonoBehaviour
             pressedKeys.Clear();
         }
 
-
         if (pressedKeys.Count == 2)
         {
+            foreach (int index in pressedKeys)
+            {
+                if (!keyImages[index].enabled)
+                {
+                    keyImages[index].enabled = true;
+                }
+            }
+
             ResetImages();
             MoveToNextLocation();
             pressedKeys.Clear();
