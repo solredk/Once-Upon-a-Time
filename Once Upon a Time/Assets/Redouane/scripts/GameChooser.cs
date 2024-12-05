@@ -11,8 +11,6 @@ public class GameChooser : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         SceneManager.LoadScene(sceneIndex);
-
-
     }
 
 }
