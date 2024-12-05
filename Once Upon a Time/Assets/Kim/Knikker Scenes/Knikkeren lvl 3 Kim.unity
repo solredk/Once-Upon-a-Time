@@ -13466,7 +13466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   marblePrefab: {fileID: 6516019648782796371, guid: c891246842a35dd469078a2c4b6aa2d4, type: 3}
   spawnPoint: {fileID: 1258603196}
-  numberOfPlayers: 2
+  numberOfPlayers: 4
   playerColors:
   - {r: 0.0082166195, g: 1, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
