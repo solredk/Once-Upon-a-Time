@@ -81,7 +81,7 @@ public class NieuweHinkel : MonoBehaviour
     {
         Debug.Log("Spawning 1 Image...");
 
-        yield return new WaitForSeconds(hinkel.randomTime1);
+        yield return new WaitForSeconds(2f);
 
         randomImage1 = GetRandomImages(keyImages, 1);
 
@@ -102,7 +102,7 @@ public class NieuweHinkel : MonoBehaviour
     {
         Debug.Log("Spawning 2 Images....");
 
-        yield return new WaitForSeconds(hinkel.randomTime2);
+        yield return new WaitForSeconds(2f);
 
         randomImage2 = GetRandomImages(keyImages, 2);
 
